@@ -92,7 +92,7 @@
 
     html {
       -webkit-text-size-adjust: 100%;
-      scroll-padding-top: 130px
+      scroll-padding-top: calc(var(--topo-h, 60px) + 8px)
     }
 
     body {
@@ -310,7 +310,7 @@
       padding: 20px;
       margin-bottom: 14px;
       box-shadow: var(--sombra);
-      scroll-margin-top: 130px
+      scroll-margin-top: calc(var(--nav-h, 70px) + 14px)
     }
 
     .secao-t {
@@ -369,7 +369,7 @@
     /* ------------------------------------------------------- navegação topo */
     .nav-etapas {
       position: sticky;
-      top: 61px;
+      top: calc(var(--topo-h, 60px) + 9px);
       z-index: 40;
       display: flex;
       gap: 7px;
@@ -1152,7 +1152,7 @@
 
     .ferramentas input[type=search] {
       flex: 1;
-      min-width: 210px
+      min-width: 160px
     }
 
     .ferramentas input:focus,
@@ -1163,19 +1163,25 @@
     }
 
     .periodo {
-      display: inline-flex;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 7px
+      gap: 7px;
+      max-width: 100%;
+      flex: 1 1 260px
     }
 
     .periodo input[type=date] {
-      padding: 11px;
+      padding: 11px 9px;
       border: 1px solid var(--bd2);
       border-radius: 10px;
       background: var(--card);
       min-height: 46px;
       font-size: 14px;
-      color: var(--tx)
+      color: var(--tx);
+      flex: 1 1 120px;
+      min-width: 0;
+      max-width: 190px
     }
 
     .periodo .sep {
@@ -1862,10 +1868,6 @@
         padding: 16px 14px
       }
 
-      .nav-etapas {
-        top: 56px
-      }
-
       .acoes-finais {
         bottom: 8px;
         flex-wrap: wrap
@@ -1885,6 +1887,91 @@
 
       #toasts {
         bottom: 86px
+      }
+    }
+
+    @media(max-width:400px) {
+      .topo-in {
+        padding: 8px 9px;
+        gap: 6px;
+        flex-wrap: wrap
+      }
+
+      .abas {
+        flex: 1 1 auto;
+        min-width: 0;
+        flex-wrap: wrap;
+        justify-content: flex-end
+      }
+
+      .sessao {
+        font-size: 11px;
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+      }
+
+      .monograma {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        border-radius: 8px
+      }
+
+      .marca {
+        gap: 6px
+      }
+
+      .marca .nome {
+        font-size: 14px
+      }
+
+      .aba {
+        padding: 6px 9px;
+        font-size: 12px
+      }
+
+      .ico-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px
+      }
+
+      main {
+        padding: 10px 8px 40px
+      }
+
+      .card {
+        padding: 14px 11px
+      }
+
+      .acoes-finais .btn {
+        min-width: 110px;
+        font-size: 14px;
+        padding: 10px 8px
+      }
+
+      .ferramentas input[type=search] {
+        min-width: 110px
+      }
+
+      .kpis {
+        grid-template-columns: repeat(auto-fit, minmax(132px, 1fr))
+      }
+
+      .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+      }
+
+      .status-barra textarea {
+        min-width: 140px
+      }
+
+      .doc {
+        padding: 16px 12px
       }
     }
   </style>
@@ -2051,7 +2138,15 @@
         const nome = u ? u.nome : "";
         if ((d.cadastrador || "") !== nome) { d.cadastrador = nome; render() }
       }
+      medirTopo();
     }
+    function medirTopo() {
+      const t = document.querySelector(".topo");
+      if (t) document.documentElement.style.setProperty("--topo-h", Math.round(t.offsetHeight) + "px");
+      const n = document.querySelector(".nav-etapas");
+      if (n) document.documentElement.style.setProperty("--nav-h", Math.round(n.offsetHeight) + "px");
+    }
+    window.addEventListener("resize", () => { clearTimeout(window.__tTopo); window.__tTopo = setTimeout(medirTopo, 120) });
     $("#btnSair").onclick = sairSessao;
 
     async function entrarModal() {
@@ -2257,6 +2352,7 @@
       cond();
       iniciarAssinaturas();
       marcarSecaoAtiva();
+      medirTopo();
     }
     function docsHTML() {
       return '<section class="card" id="sec-6">' +
@@ -3045,6 +3141,8 @@
         atualizarBarraSessao();
         render();
         renderLista();
+        medirTopo();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(medirTopo);
       } catch (e) { aviso("Falha na inicialização: " + (e && e.stack ? e.stack : String(e))) }
     })();
   </script>
