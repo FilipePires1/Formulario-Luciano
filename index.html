@@ -1,0 +1,3053 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <title>Cadastro REURB – Matipó/MG · Escriturar Soluções Fundiárias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* =====================================================================
+   Cadastro REURB – Matipó/MG · Escriturar Soluções Fundiárias Ltda.
+   Identidade: Inter · superfícies claras · verde-petróleo
+   ===================================================================== */
+    :root {
+      --fnt: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --tx: #101828;
+      --tx2: #667085;
+      --tx3: #98a2b3;
+      --bd: #e4e7ec;
+      --bd2: #d0d5dd;
+      --prim: #0f766e;
+      --prim-h: #0b5f59;
+      --prim-bg: #f0fdfa;
+      --prim-bd: #99f6e4;
+      --azul: #175cd3;
+      --azul-bg: #eff8ff;
+      --azul-bd: #b2ddff;
+      --ambar: #b54708;
+      --ambar-bg: #fffaeb;
+      --ambar-bd: #fedf89;
+      --verm: #b42318;
+      --verm-bg: #fef3f2;
+      --verm-bd: #fecdca;
+      --verd: #067647;
+      --verd-bg: #ecfdf3;
+      --verd-bd: #abefc6;
+      --cinza: #475467;
+      --cinza-bg: #f2f4f7;
+      --sombra: 0 1px 2px rgba(16, 24, 40, .05), 0 1px 3px rgba(16, 24, 40, .06);
+      --sombra-g: 0 8px 24px rgba(16, 24, 40, .10);
+      --raio: 12px;
+      --raio-s: 9px;
+      --tap: 46px;
+      --papel: #f4f6f8;
+      --tinta: #101828;
+      --tinta-2: #667085;
+      --linha: #e4e7ec;
+      --verde: #0f766e;
+      --latao: #175cd3;
+      --perigo: #b42318;
+    }
+
+    html[data-theme="dark"] {
+      --bg: #0c111d;
+      --card: #151b27;
+      --tx: #eaecf0;
+      --tx2: #98a2b3;
+      --tx3: #667085;
+      --bd: #293241;
+      --bd2: #344054;
+      --prim: #2dd4bf;
+      --prim-h: #5eead4;
+      --prim-bg: #0c2b2a;
+      --prim-bd: #155e56;
+      --azul: #84cafd;
+      --azul-bg: #0b2b45;
+      --azul-bd: #194185;
+      --ambar: #fdb022;
+      --ambar-bg: #3b2a06;
+      --ambar-bd: #7a5c14;
+      --verm: #fda29b;
+      --verm-bg: #3b1714;
+      --verm-bd: #7a271a;
+      --verd: #6ce9a6;
+      --verd-bg: #073d25;
+      --verd-bd: #146c43;
+      --cinza: #d0d5dd;
+      --cinza-bg: #1f2733;
+      --sombra: 0 1px 2px rgba(0, 0, 0, .4), 0 2px 6px rgba(0, 0, 0, .3);
+      --sombra-g: 0 10px 30px rgba(0, 0, 0, .5);
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-padding-top: 130px
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--tx);
+      font: 15px/1.55 var(--fnt);
+      min-height: 100vh;
+      padding-bottom: 48px;
+      -webkit-font-smoothing: antialiased
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+      color: inherit
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0
+    }
+
+    .hide {
+      display: none !important
+    }
+
+    .muted {
+      color: var(--tx2)
+    }
+
+    .mini {
+      font-size: 12px
+    }
+
+    .small {
+      font-size: 13.5px
+    }
+
+    /* ---------------------------------------------------------------- topo */
+    .topo {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: saturate(160%) blur(8px);
+      border-bottom: 1px solid var(--bd)
+    }
+
+    html[data-theme="dark"] .topo {
+      background: rgba(21, 27, 39, .94)
+    }
+
+    .topo-in {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 9px 14px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .marca {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      min-width: 0;
+      flex: 1
+    }
+
+    .monograma {
+      width: 38px;
+      height: 38px;
+      flex: none;
+      border-radius: 10px;
+      background: var(--prim);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .4px
+    }
+
+    .kicker {
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--tx3);
+      font-weight: 600
+    }
+
+    .marca .nome {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      line-height: 1.2;
+      color: var(--tx)
+    }
+
+    .marca .nome em {
+      font-style: normal;
+      color: var(--prim);
+      font-weight: 600
+    }
+
+    .abas {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .aba {
+      background: transparent;
+      color: var(--tx2);
+      border: 1px solid transparent;
+      border-radius: 9px;
+      padding: 8px 13px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .14s
+    }
+
+    .aba:hover {
+      background: var(--cinza-bg);
+      color: var(--tx)
+    }
+
+    .aba.on {
+      background: var(--prim);
+      border-color: var(--prim);
+      color: #fff
+    }
+
+    .ico-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      border: 1px solid var(--bd);
+      background: var(--card);
+      color: var(--tx2);
+      cursor: pointer;
+      font-size: 15px
+    }
+
+    .ico-btn:hover {
+      color: var(--tx);
+      border-color: var(--bd2)
+    }
+
+    .sessao {
+      font-size: 12.5px;
+      color: var(--tx2);
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      padding: 5px 9px;
+      background: var(--cinza-bg);
+      border-radius: 8px
+    }
+
+    .sessao b {
+      font-weight: 700;
+      color: var(--tx)
+    }
+
+    .link-sair {
+      background: none;
+      border: 0;
+      color: var(--prim);
+      cursor: pointer;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-decoration: underline;
+      padding: 0
+    }
+
+    /* ------------------------------------------------------------ conteúdo */
+    main {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 16px 14px 40px
+    }
+
+    main.painel-larg {
+      max-width: 1180px
+    }
+
+    .rodape {
+      max-width: 1180px;
+      margin: 22px auto 0;
+      padding: 14px;
+      border-top: 1px solid var(--bd);
+      font-size: 11.5px;
+      color: var(--tx3);
+      text-align: center
+    }
+
+    /* -------------------------------------------------------------- cartão */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--bd);
+      border-radius: var(--raio);
+      padding: 20px;
+      margin-bottom: 14px;
+      box-shadow: var(--sombra);
+      scroll-margin-top: 130px
+    }
+
+    .secao-t {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      border-bottom: 1px solid var(--bd);
+      padding-bottom: 13px;
+      margin-bottom: 18px
+    }
+
+    .secao-n {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: var(--prim-bg);
+      color: var(--prim);
+      border: 1px solid var(--prim-bd);
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 800
+    }
+
+    .secao-t h2 {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -.01em
+    }
+
+    .secao-t p {
+      margin: 2px 0 0;
+      font-size: 12.5px;
+      color: var(--tx2)
+    }
+
+    .legenda-topo {
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--tx3);
+      font-weight: 700;
+      margin-bottom: 10px
+    }
+
+    .nota {
+      background: var(--cinza-bg);
+      border: 1px dashed var(--bd2);
+      color: var(--tx2);
+      padding: 14px;
+      border-radius: var(--raio-s);
+      font-size: 13.5px
+    }
+
+    /* ------------------------------------------------------- navegação topo */
+    .nav-etapas {
+      position: sticky;
+      top: 61px;
+      z-index: 40;
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding: 10px;
+      background: var(--card);
+      border: 1px solid var(--bd);
+      border-radius: var(--raio);
+      margin-bottom: 14px;
+      box-shadow: var(--sombra);
+      scrollbar-width: thin
+    }
+
+    .nav-etapas button {
+      flex: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 12px;
+      border: 1px solid var(--bd);
+      background: var(--bg);
+      border-radius: var(--raio-s);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--tx2);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: .14s
+    }
+
+    .nav-etapas button b {
+      font-size: 11px;
+      color: var(--prim);
+      font-weight: 800
+    }
+
+    .nav-etapas button:hover {
+      border-color: var(--prim);
+      color: var(--prim);
+      background: var(--prim-bg)
+    }
+
+    .nav-etapas button.on {
+      background: var(--prim);
+      border-color: var(--prim);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(15, 118, 110, .28)
+    }
+
+    .nav-etapas button.on b {
+      color: #fff
+    }
+
+    .nav-etapas .selo {
+      margin-left: auto;
+      font-size: 11.5px;
+      color: var(--tx3);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px dashed var(--bd2);
+      background: var(--bg);
+      font-weight: 600
+    }
+
+    @media(min-width:780px) {
+      .nav-etapas {
+        flex-wrap: wrap;
+        overflow: visible
+      }
+    }
+
+    .selo-auto {
+      font-weight: 600
+    }
+
+    .selo-auto.ok {
+      color: var(--verd)
+    }
+
+    /* ------------------------------------------------------------ formulário */
+    .grade {
+      display: grid;
+      gap: 0 16px
+    }
+
+    @media(min-width:640px) {
+      .g2 {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .g3 {
+        grid-template-columns: 1fr 1fr 1fr
+      }
+    }
+
+    label.f {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #344054
+    }
+
+    html[data-theme="dark"] label.f {
+      color: var(--tx2)
+    }
+
+    label.f input,
+    label.f select,
+    label.f textarea {
+      display: block;
+      width: 100%;
+      margin-top: 6px;
+      padding: 11px 13px;
+      font-size: 15px;
+      font-weight: 400;
+      background: var(--card);
+      border: 1px solid var(--bd2);
+      border-radius: 10px;
+      color: var(--tx);
+      transition: .14s
+    }
+
+    label.f input:focus,
+    label.f select:focus,
+    label.f textarea:focus {
+      outline: none;
+      border-color: var(--prim);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, .14)
+    }
+
+    label.f input[readonly] {
+      background: var(--cinza-bg);
+      color: var(--tx2);
+      font-weight: 600
+    }
+
+    label.f .dica {
+      display: block;
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--tx3)
+    }
+
+    label.f .msg-erro {
+      display: none;
+      margin-top: 5px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--verm)
+    }
+
+    label.f.erro input {
+      border-color: var(--verm);
+      background: var(--verm-bg)
+    }
+
+    label.f.erro .msg-erro {
+      display: block
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23667085' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px;
+      padding-right: 36px
+    }
+
+    textarea {
+      min-height: 84px;
+      resize: vertical
+    }
+
+    .grp {
+      margin-bottom: 16px
+    }
+
+    .grp>span {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #344054;
+      margin-bottom: 8px
+    }
+
+    html[data-theme="dark"] .grp>span {
+      color: var(--tx2)
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .chip {
+      position: relative
+    }
+
+    .chip input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none
+    }
+
+    .chip span {
+      display: inline-flex;
+      align-items: center;
+      min-height: var(--tap);
+      padding: 9px 15px;
+      border: 1px solid var(--bd2);
+      border-radius: 10px;
+      background: var(--card);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: .13s
+    }
+
+    .chip span::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--bd2);
+      margin-right: 9px;
+      transition: .13s
+    }
+
+    .chip input:checked+span {
+      background: var(--prim-bg);
+      border-color: var(--prim);
+      color: var(--prim);
+      font-weight: 600
+    }
+
+    .chip input:checked+span::before {
+      background: var(--prim);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, .18)
+    }
+
+    .chip input:focus-visible+span {
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, .2)
+    }
+
+    /* -------------------------------------------------------------- botões */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: var(--tap);
+      padding: 11px 18px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      background: var(--prim);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .01em;
+      cursor: pointer;
+      transition: .15s;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0 1px 2px rgba(16, 24, 40, .08)
+    }
+
+    .btn:hover {
+      background: var(--prim-h);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(15, 118, 110, .3)
+    }
+
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 2px rgba(16, 24, 40, .08)
+    }
+
+    .btn:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none
+    }
+
+    .btn.linha {
+      background: var(--card);
+      color: var(--prim);
+      border-color: var(--prim)
+    }
+
+    .btn.linha:hover {
+      background: var(--prim-bg);
+      box-shadow: 0 6px 16px rgba(15, 118, 110, .18)
+    }
+
+    .btn.azul {
+      background: var(--azul-bg);
+      color: var(--azul);
+      border-color: var(--azul-bd);
+      box-shadow: none
+    }
+
+    .btn.azul:hover {
+      background: var(--azul);
+      color: #fff;
+      border-color: var(--azul);
+      box-shadow: 0 6px 16px rgba(23, 92, 211, .28)
+    }
+
+    .btn.fantasma {
+      background: var(--cinza-bg);
+      color: var(--tx);
+      border-color: var(--bd2);
+      box-shadow: none
+    }
+
+    .btn.fantasma:hover {
+      background: var(--bd);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(16, 24, 40, .12)
+    }
+
+    .btn.perigo {
+      background: var(--card);
+      color: var(--verm);
+      border-color: var(--verm)
+    }
+
+    .btn.perigo:hover {
+      background: var(--verm);
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(180, 35, 24, .28)
+    }
+
+    .btn.latao {
+      background: var(--azul);
+      color: #fff;
+      border-color: var(--azul)
+    }
+
+    .btn.latao:hover {
+      background: #1849a9;
+      border-color: #1849a9;
+      box-shadow: 0 6px 16px rgba(23, 92, 211, .32)
+    }
+
+    .btn.sm {
+      min-height: 36px;
+      padding: 7px 13px;
+      font-size: 13.5px;
+      border-radius: var(--raio-s)
+    }
+
+    .btn.grande {
+      width: 100%;
+      min-height: 54px;
+      font-size: 16px
+    }
+
+    .btn.grupo {
+      display: flex;
+      gap: 10px;
+      margin-top: 6px;
+      flex-wrap: wrap
+    }
+
+    .btn-grupo {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px
+    }
+
+    .sombra-topo {
+      position: relative
+    }
+
+    .acoes-finais {
+      position: sticky;
+      bottom: 12px;
+      display: flex;
+      gap: 10px;
+      padding: 12px;
+      z-index: 35;
+      background: var(--card);
+      border: 1px solid var(--bd);
+      border-radius: var(--raio);
+      box-shadow: var(--sombra-g);
+      margin-top: 6px
+    }
+
+    .acoes-finais .btn {
+      flex: 1;
+      min-width: 150px
+    }
+
+    /* ---------------------------------------------------------- documentos */
+    .ph {
+      border: 1.5px dashed var(--bd2);
+      border-radius: var(--raio);
+      padding: 16px;
+      margin-bottom: 12px;
+      background: var(--card)
+    }
+
+    .ph.ok {
+      border-style: solid;
+      border-color: var(--verd-bd);
+      background: var(--verd-bg)
+    }
+
+    html[data-theme="dark"] .ph.ok {
+      background: var(--verd-bg)
+    }
+
+    .ph-topo {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start
+    }
+
+    .ph b {
+      font-size: 15px;
+      font-weight: 600;
+      display: block
+    }
+
+    .ph small {
+      display: block;
+      color: var(--tx2);
+      font-size: 12.5px;
+      margin-top: 2px
+    }
+
+    .check-ok {
+      width: 24px;
+      height: 24px;
+      flex: none;
+      border-radius: 50%;
+      border: 1.5px solid var(--bd2);
+      display: grid;
+      place-items: center;
+      background: var(--card)
+    }
+
+    .check-ok::after {
+      content: "";
+      width: 5px;
+      height: 10px;
+      border-right: 2.5px solid transparent;
+      border-bottom: 2.5px solid transparent;
+      transform: translateY(-2px) rotate(45deg)
+    }
+
+    .ph.ok .check-ok {
+      background: var(--verd);
+      border-color: var(--verd)
+    }
+
+    .ph.ok .check-ok::after {
+      border-right-color: #fff;
+      border-bottom-color: #fff
+    }
+
+    .ph-acoes {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      align-items: center
+    }
+
+    .qtd {
+      font-size: 12.5px;
+      color: var(--tx2);
+      font-weight: 500
+    }
+
+    .miniaturas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px
+    }
+
+    .mini {
+      position: relative;
+      width: 86px
+    }
+
+    .mini img {
+      width: 86px;
+      height: 86px;
+      object-fit: cover;
+      border: 1px solid var(--bd);
+      border-radius: 10px;
+      background: var(--cinza-bg);
+      cursor: pointer;
+      box-shadow: var(--sombra)
+    }
+
+    .mini .x {
+      position: absolute;
+      top: -7px;
+      right: -7px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 0;
+      background: var(--verm);
+      color: #fff;
+      font-size: 13px;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: var(--sombra)
+    }
+
+    .mini .zoom {
+      position: absolute;
+      bottom: 6px;
+      left: 6px;
+      background: rgba(16, 24, 40, .7);
+      color: #fff;
+      border: 0;
+      border-radius: 6px;
+      font-size: 11px;
+      padding: 2px 6px;
+      cursor: pointer
+    }
+
+    .barra-envio {
+      height: 6px;
+      background: var(--cinza-bg);
+      border: 1px solid var(--bd);
+      border-radius: 99px;
+      overflow: hidden;
+      margin-top: 12px
+    }
+
+    .barra-envio i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--prim);
+      transition: width .2s
+    }
+
+    /* ------------------------------------------------------------ assinatura */
+    .assinatura {
+      margin-bottom: 16px
+    }
+
+    .assinatura .linha-topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 7px;
+      gap: 10px
+    }
+
+    .assinatura .rot {
+      font-size: 13px;
+      font-weight: 600;
+      color: #344054
+    }
+
+    html[data-theme="dark"] .assinatura .rot {
+      color: var(--tx2)
+    }
+
+    canvas.sig {
+      width: 100%;
+      height: 132px;
+      display: block;
+      background: #fff;
+      border: 1px solid var(--bd2);
+      border-radius: 10px;
+      touch-action: none
+    }
+
+    .canvas-nota {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11.5px;
+      color: var(--tx3);
+      margin-top: 5px
+    }
+
+    .declaracao {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--tx);
+      border-left: 3px solid var(--prim);
+      padding: 2px 0 2px 14px;
+      margin: 0 0 18px
+    }
+
+    .lgpd {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      padding: 14px;
+      border: 1px solid var(--bd);
+      border-radius: var(--raio);
+      background: var(--bg);
+      cursor: pointer;
+      font-size: 13.5px;
+      line-height: 1.5
+    }
+
+    .lgpd input {
+      width: 20px;
+      height: 20px;
+      flex: none;
+      margin-top: 2px;
+      accent-color: var(--prim)
+    }
+
+    .local-data {
+      margin-top: 16px;
+      font-size: 14.5px;
+      color: var(--tx2);
+      text-align: center
+    }
+
+    /* -------------------------------------------------------- minhas fichas */
+    .lista-fichas .li {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 4px;
+      border-bottom: 1px solid var(--bd);
+      cursor: pointer
+    }
+
+    .lista-fichas .li:last-child {
+      border-bottom: 0
+    }
+
+    .lista-fichas .li:hover {
+      background: var(--bg)
+    }
+
+    .lista-fichas .num {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--prim);
+      margin-right: 6px
+    }
+
+    .lista-fichas b {
+      font-size: 15px
+    }
+
+    .lista-fichas small {
+      display: block;
+      color: var(--tx2);
+      font-size: 12.5px
+    }
+
+    /* ------------------------------------------------------------- selos */
+    .stamp {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      line-height: 1.5
+    }
+
+    .s-rascunho {
+      background: var(--cinza-bg);
+      color: var(--cinza);
+      border-color: var(--bd2)
+    }
+
+    .s-recebida {
+      background: var(--azul-bg);
+      color: var(--azul);
+      border-color: var(--azul-bd)
+    }
+
+    .s-analise {
+      background: var(--ambar-bg);
+      color: var(--ambar);
+      border-color: var(--ambar-bd)
+    }
+
+    .s-pendente {
+      background: var(--verm-bg);
+      color: var(--verm);
+      border-color: var(--verm-bd)
+    }
+
+    .s-aprovada {
+      background: var(--verd-bg);
+      color: var(--verd);
+      border-color: var(--verd-bd)
+    }
+
+    .tag-mod {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--prim-bg);
+      color: var(--prim);
+      border: 1px solid var(--prim-bd)
+    }
+
+    .tag-mod.e {
+      background: var(--ambar-bg);
+      color: var(--ambar);
+      border-color: var(--ambar-bd)
+    }
+
+    /* -------------------------------------------------------------- painel */
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 11px;
+      margin-bottom: 15px
+    }
+
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--bd);
+      border-left: 3px solid var(--prim);
+      border-radius: var(--raio);
+      padding: 14px;
+      box-shadow: var(--sombra)
+    }
+
+    .kpi .v {
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -.02em
+    }
+
+    .kpi .r {
+      font-size: 10.5px;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: var(--tx2);
+      font-weight: 700;
+      margin-top: 7px
+    }
+
+    .ferramentas {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 11px
+    }
+
+    .ferramentas input[type=search],
+    .ferramentas select {
+      padding: 11px 12px;
+      border: 1px solid var(--bd2);
+      border-radius: 10px;
+      background: var(--card);
+      min-height: 46px;
+      font-size: 14.5px;
+      color: var(--tx)
+    }
+
+    .ferramentas input[type=search] {
+      flex: 1;
+      min-width: 210px
+    }
+
+    .ferramentas input:focus,
+    .ferramentas select:focus {
+      outline: none;
+      border-color: var(--prim);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, .14)
+    }
+
+    .periodo {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .periodo input[type=date] {
+      padding: 11px;
+      border: 1px solid var(--bd2);
+      border-radius: 10px;
+      background: var(--card);
+      min-height: 46px;
+      font-size: 14px;
+      color: var(--tx)
+    }
+
+    .periodo .sep {
+      font-size: 12px;
+      color: var(--tx3)
+    }
+
+    .contagem {
+      font-size: 12.5px;
+      color: var(--tx2);
+      margin-bottom: 9px
+    }
+
+    .tabela-corpo {
+      overflow-x: auto;
+      border: 1px solid var(--bd);
+      border-radius: var(--raio);
+      background: var(--card);
+      box-shadow: var(--sombra)
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      min-width: 780px
+    }
+
+    th {
+      font-size: 10.5px;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--tx2);
+      text-align: left;
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--bd);
+      white-space: nowrap;
+      background: var(--bg);
+      font-weight: 700
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--bd);
+      vertical-align: middle
+    }
+
+    tbody tr {
+      cursor: pointer;
+      transition: .12s
+    }
+
+    tbody tr:hover td {
+      background: var(--prim-bg)
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0
+    }
+
+    td .nome {
+      font-weight: 600
+    }
+
+    td .sub {
+      display: block;
+      font-size: 12px;
+      color: var(--tx2);
+      margin-top: 2px
+    }
+
+    td.n {
+      font-weight: 700;
+      color: var(--prim)
+    }
+
+    .pager {
+      display: flex;
+      gap: 7px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 13px
+    }
+
+    /* ------------------------------------------------------------ documento */
+    .doc {
+      background: #fff;
+      color: #101828;
+      border: 1px solid var(--bd);
+      border-radius: var(--raio);
+      padding: 26px 22px;
+      box-shadow: var(--sombra);
+      font-size: 14px
+    }
+
+    .doc-cab {
+      text-align: center;
+      border-bottom: 2px solid #0f766e;
+      padding-bottom: 12px;
+      margin-bottom: 18px
+    }
+
+    .doc-cab .marca-d {
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #0f766e;
+      font-weight: 700
+    }
+
+    .doc-cab h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 6px;
+      color: #101828;
+      letter-spacing: -.01em
+    }
+
+    .doc-cab p {
+      margin: 5px 0 0;
+      font-size: 11.5px;
+      color: #667085
+    }
+
+    .doc-cab .nficha {
+      font-size: 12.5px;
+      font-weight: 700;
+      margin-top: 7px;
+      color: #0f766e
+    }
+
+    .doc-sec {
+      margin-bottom: 18px;
+      break-inside: avoid
+    }
+
+    .doc-sec h3 {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #0f766e;
+      border-bottom: 1px solid #e4e7ec;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 9px;
+      align-items: center
+    }
+
+    .doc-sec h3 .n {
+      font-size: 11px;
+      font-weight: 800;
+      color: #fff;
+      background: #0f766e;
+      border-radius: 6px;
+      padding: 2px 6px
+    }
+
+    .doc-campos {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 7px 22px
+    }
+
+    @media(min-width:600px) {
+      .doc-campos {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    .doc-campo {
+      font-size: 13px;
+      break-inside: avoid
+    }
+
+    .doc-campo .k {
+      display: block;
+      font-size: 9.5px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #98a2b3;
+      font-weight: 700
+    }
+
+    .doc-campo .v {
+      font-size: 14px;
+      color: #101828;
+      word-break: break-word
+    }
+
+    .doc-campo.larg {
+      grid-column: 1/-1
+    }
+
+    .doc-assin {
+      display: flex;
+      gap: 34px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      text-align: center
+    }
+
+    .doc-assin img {
+      height: 74px;
+      border-bottom: 1.5px solid #101828;
+      padding: 0 26px
+    }
+
+    .doc-assin p {
+      font-size: 11px;
+      color: #667085;
+      margin: 6px 0 0;
+      letter-spacing: .06em;
+      text-transform: uppercase
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 13px
+    }
+
+    .foto-card {
+      background: var(--card);
+      border: 1px solid var(--bd);
+      border-radius: 10px;
+      padding: 8px;
+      cursor: pointer;
+      transition: .15s
+    }
+
+    .foto-card:hover {
+      box-shadow: var(--sombra-g);
+      transform: translateY(-2px)
+    }
+
+    .foto-card img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      background: var(--cinza-bg);
+      border-radius: 6px
+    }
+
+    .foto-card .leg {
+      font-size: 12px;
+      color: var(--tx2);
+      margin-top: 8px;
+      line-height: 1.35
+    }
+
+    .hist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13.5px
+    }
+
+    .hist li {
+      padding: 9px 0;
+      border-bottom: 1px solid var(--bd);
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap
+    }
+
+    .hist li:last-child {
+      border-bottom: 0
+    }
+
+    .hist time {
+      font-size: 12px;
+      color: var(--tx3);
+      flex: none;
+      font-weight: 600
+    }
+
+    .status-barra {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 13px;
+      background: var(--bg);
+      border: 1px solid var(--bd);
+      border-radius: var(--raio);
+      margin-bottom: 14px
+    }
+
+    .status-barra select,
+    .status-barra textarea {
+      padding: 10px 12px;
+      border: 1px solid var(--bd2);
+      border-radius: 10px;
+      background: var(--card);
+      font-size: 14px;
+      color: var(--tx)
+    }
+
+    .status-barra textarea {
+      min-height: 46px;
+      flex: 1;
+      min-width: 200px;
+      resize: vertical
+    }
+
+    /* ------------------------------------------------------------- lightbox */
+    .lbx {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(9, 14, 24, .95);
+      display: flex;
+      flex-direction: column
+    }
+
+    .lbx-topo {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      color: #e4e7ec;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+      font-size: 13.5px
+    }
+
+    .lbx-topo b {
+      font-size: 15px;
+      font-weight: 600
+    }
+
+    .lbx-corpo {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative
+    }
+
+    .lbx-corpo img {
+      max-width: 94vw;
+      max-height: 78vh;
+      object-fit: contain;
+      transition: transform .18s;
+      cursor: zoom-in
+    }
+
+    .lbx-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .28);
+      background: rgba(255, 255, 255, .1);
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer
+    }
+
+    .lbx-nav:hover {
+      background: rgba(255, 255, 255, .22)
+    }
+
+    .lbx-nav.e {
+      left: 12px
+    }
+
+    .lbx-nav.d {
+      right: 12px
+    }
+
+    .lbx-pe {
+      display: flex;
+      gap: 9px;
+      justify-content: center;
+      padding: 13px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255, 255, 255, .12)
+    }
+
+    .lbx-pe .btn {
+      background: rgba(255, 255, 255, .12);
+      color: #f2f4f7;
+      border-color: rgba(255, 255, 255, .24)
+    }
+
+    .lbx-pe .btn:hover {
+      background: rgba(255, 255, 255, .22)
+    }
+
+    /* -------------------------------------------------------- modal / toast */
+    .ov {
+      position: fixed;
+      inset: 0;
+      z-index: 400;
+      background: rgba(16, 24, 40, .55);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      animation: fade .16s
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .mo {
+      background: var(--card);
+      color: var(--tx);
+      border: 1px solid var(--bd);
+      border-radius: 14px;
+      width: min(100%, 540px);
+      max-height: 88vh;
+      overflow: auto;
+      padding: 22px;
+      box-shadow: var(--sombra-g)
+    }
+
+    .mo h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px
+    }
+
+    .mo p {
+      font-size: 14px;
+      color: var(--tx2);
+      margin: 0
+    }
+
+    .mo-acoes {
+      display: flex;
+      gap: 9px;
+      justify-content: flex-end;
+      margin-top: 18px;
+      flex-wrap: wrap
+    }
+
+    #toasts {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: min(94vw, 440px);
+      pointer-events: none
+    }
+
+    .toast {
+      background: #101828;
+      color: #f9fafb;
+      padding: 13px 15px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 10px 30px rgba(16, 24, 40, .3);
+      border-left: 4px solid var(--prim);
+      animation: subir .2s
+    }
+
+    .toast.erro {
+      border-left-color: #f04438
+    }
+
+    @keyframes subir {
+      from {
+        opacity: 0;
+        transform: translateY(12px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .aviso {
+      padding: 13px 15px;
+      border-radius: var(--raio);
+      border: 1px solid var(--ambar-bd);
+      background: var(--ambar-bg);
+      color: var(--ambar);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 13px
+    }
+
+    .vazio {
+      text-align: center;
+      padding: 44px 16px;
+      color: var(--tx2)
+    }
+
+    .vazio .ic {
+      font-size: 40px;
+      opacity: .6;
+      margin-bottom: 6px
+    }
+
+    .tema {
+      position: fixed;
+      right: 14px;
+      bottom: 14px;
+      z-index: 70;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--bd);
+      background: var(--card);
+      color: var(--tx2);
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: var(--sombra-g)
+    }
+
+    /* ----------------------------------------------------------- impressão */
+    #print {
+      display: none
+    }
+
+    @media print {
+      @page {
+        margin: 12mm
+      }
+
+      html,
+      body {
+        background: #fff !important;
+        color: #000 !important
+      }
+
+      body>*:not(#print) {
+        display: none !important
+      }
+
+      #print {
+        display: block !important
+      }
+
+      #print .doc {
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+        background: #fff;
+        color: #000
+      }
+
+      #print .doc-cab h1,
+      #print .doc-campo .v,
+      #print .doc-sec h3 {
+        color: #000
+      }
+
+      #print .doc-sec h3 {
+        border-bottom: 1px solid #000
+      }
+
+      #print .doc-sec h3 .n {
+        background: #000;
+        color: #fff
+      }
+
+      #print .doc-cab .marca-d,
+      #print .doc-cab .nficha {
+        color: #000
+      }
+
+      #print .doc-cab {
+        border-bottom: 2px solid #000
+      }
+
+      #print .doc-campo .k {
+        color: #444
+      }
+
+      #print .pg {
+        break-before: page;
+        page-break-before: always
+      }
+
+      #print .foto-pg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 86vh
+      }
+
+      #print .foto-pg img {
+        max-width: 100%;
+        max-height: 74vh;
+        border: 1px solid #ccc
+      }
+
+      #print .foto-pg .cap {
+        font-size: 13px;
+        margin-top: 12px;
+        text-align: center;
+        color: #000
+      }
+
+      #print .foto-pg .cap b {
+        display: block;
+        font-size: 15px
+      }
+    }
+
+    /* ----------------------------------------------------------- responsivo */
+    @media(max-width:640px) {
+      .kicker {
+        display: none
+      }
+
+      .marca {
+        flex: 1 1 auto;
+        min-width: 0;
+        gap: 8px
+      }
+
+      .marca .nome {
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+      }
+
+      .marca .nome em {
+        display: none
+      }
+
+      .monograma {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+        border-radius: 9px
+      }
+
+      .topo-in {
+        padding: 8px 12px;
+        gap: 8px;
+        flex-wrap: nowrap
+      }
+
+      .abas {
+        margin-left: auto;
+        flex: 0 0 auto;
+        gap: 4px
+      }
+
+      .aba {
+        padding: 7px 11px;
+        font-size: 12.5px
+      }
+
+      .sessao {
+        font-size: 11.5px;
+        gap: 6px
+      }
+
+      .ico-btn {
+        width: 32px;
+        height: 32px
+      }
+
+      main {
+        padding: 12px 10px 40px
+      }
+
+      .card {
+        padding: 16px 14px
+      }
+
+      .nav-etapas {
+        top: 56px
+      }
+
+      .acoes-finais {
+        bottom: 8px;
+        flex-wrap: wrap
+      }
+
+      .acoes-finais .btn {
+        min-width: 130px
+      }
+
+      .doc {
+        padding: 18px 14px
+      }
+
+      .tema {
+        display: none
+      }
+
+      #toasts {
+        bottom: 86px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topo">
+    <div class="topo-in">
+      <div class="marca">
+        <div class="monograma">ES</div>
+        <div>
+          <div class="kicker">Escriturar Soluções Fundiárias Ltda.</div>
+          <div class="nome">Cadastro REURB <em>· Matipó/MG</em></div>
+        </div>
+      </div>
+      <nav class="abas">
+        <button id="tN" class="aba on">Nova ficha</button>
+        <button id="tP" class="aba">Painel</button>
+        <span class="sessao hide" id="sessaoBox"><b id="sessaoNome"></b><button class="link-sair"
+            id="btnSair">sair</button></span>
+        <button class="ico-btn" id="btnTema" title="Alternar tema">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="aviso" class="aviso hide"></div>
+    <section id="vN"></section>
+    <section id="vP" class="hide"></section>
+  </main>
+
+  <div class="rodape">
+    Ata de Registro de Preços nº 015/2026 · Escriturar Soluções Fundiárias Ltda. —
+    Dados armazenados localmente neste dispositivo (demonstração).
+  </div>
+
+  <button class="tema" id="temaFlut" title="Alternar tema">◐</button>
+  <div id="toasts"></div>
+  <div id="print"></div>
+  <input type="file" id="fileCam" accept="image/*" capture="environment" class="hide">
+  <input type="file" id="fileGal" accept="image/*" multiple class="hide">
+
+  <script>
+    /* ==========================================================================
+       Cadastro REURB – Matipó/MG  ·  aplicação local (sem servidor)
+       Escriturar Soluções Fundiárias Ltda.  ·  ARP 015/2026
+       ========================================================================== */
+    'use strict';
+    const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+    const SIM_NAO = ["Sim", "Não"];
+    const HOJE = () => new Date().toISOString().slice(0, 10);
+    const agora = () => new Date();
+    const dataBR = iso => { if (!iso) return ""; const p = String(iso).slice(0, 10).split("-"); return p.length === 3 ? p[2] + "/" + p[1] + "/" + p[0] : iso };
+    const dataDe = ts => !ts ? "" : typeof ts === "number" ? new Date(ts).toISOString().slice(0, 10) : String(ts).slice(0, 10);
+    const agoraBR = () => { const d = agora(); const p = n => String(n).padStart(2, "0"); return dataBR(HOJE()) + " " + p(d.getHours()) + ":" + p(d.getMinutes()) };
+    const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const uid = () => "f" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+    const slug = s => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+    const ord = (n, l = 4) => String(n || 0).padStart(l, "0");
+
+    /* ---------------------------------------------------------- mensagens */
+    function toast(msg, tipo) {
+      const c = $("#toasts"); const d = document.createElement("div");
+      d.className = "toast" + (tipo === "erro" ? " erro" : ""); d.textContent = msg; c.appendChild(d);
+      setTimeout(() => { d.style.opacity = "0"; d.style.transition = "opacity .3s"; setTimeout(() => d.remove(), 320) }, 3000)
+    }
+    function aviso(t) { const a = $("#aviso"); if (!a) return; if (!t) { a.classList.add("hide"); return } a.textContent = t; a.classList.remove("hide") }
+    function ov(html) {
+      const d = document.createElement("div"); d.className = "ov";
+      d.innerHTML = '<div class="mo">' + html + "</div>"; document.body.appendChild(d);
+      document.body.style.overflow = "hidden";
+      const fechar = () => { d.remove(); document.body.style.overflow = "" };
+      d.addEventListener("click", e => { if (e.target === d) fechar() });
+      const x = d.querySelector("[data-x]"); if (x) x.onclick = fechar;
+      return { d, fechar, mo: d.querySelector(".mo") }
+    }
+    function confirmar(titulo, txt, okTxt) {
+      return new Promise(r => {
+        const m = ov("<h3>" + esc(titulo) + "</h3><p>" + esc(txt) + "</p><div class='mo-acoes'><button class='btn fantasma' data-x>Cancelar</button><button class='btn perigo' data-ok>" + esc(okTxt || "Confirmar") + "</button></div>");
+        m.mo.querySelector("[data-ok]").onclick = () => { m.fechar(); r(true) };
+        m.d.addEventListener("click", e => { if (e.target === m.d) r(false) });
+      })
+    }
+
+    /* ------------------------------------------------------------- tema */
+    const aplicarTema = t => {
+      document.documentElement.dataset.theme = t;
+      try { localStorage.setItem("reurb_tema", t) } catch (e) { }
+    };
+    (function () {
+      let t = "light"; try { t = localStorage.getItem("reurb_tema") || "light" } catch (e) { }
+      aplicarTema(t)
+    })();
+    const alterarTema = () => aplicarTema(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+    $("#btnTema").onclick = alterarTema; $("#temaFlut").onclick = alterarTema;
+
+    /* ------------------------------------------------- máscaras e validação */
+    const sóDigitos = v => String(v || "").replace(/\D/g, "");
+    const maskCPF = v => {
+      const d = sóDigitos(v).slice(0, 11);
+      return d.replace(/^(\d{3})(\d)/, "$1.$2").replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3").replace(/\.(\d{3})(\d{1,2})$/, ".$1-$2")
+    };
+    const maskTel = v => {
+      const d = sóDigitos(v).slice(0, 11);
+      return d.length <= 10 ? d.replace(/^(\d{2})(\d)/, "($1) $2").replace(/(\d{4})(\d{1,4})$/, "$1-$2")
+        : d.replace(/^(\d{2})(\d)/, "($1) $2").replace(/(\d{5})(\d{1,4})$/, "$1-$2")
+    };
+    function validaCPF(v) {
+      const c = sóDigitos(v); if (c.length !== 11 || /^(\d)\1{10}$/.test(c)) return false;
+      let s = 0; for (let i = 0; i < 9; i++)s += +c[i] * (10 - i); let d1 = (s * 10) % 11; if (d1 === 10) d1 = 0; if (d1 !== +c[9]) return false;
+      s = 0; for (let i = 0; i < 10; i++)s += +c[i] * (11 - i); let d2 = (s * 10) % 11; if (d2 === 10) d2 = 0; return d2 === +c[10]
+    }
+
+    /* =============================================== banco local (IndexedDB) */
+    const BD = (() => {
+      const NOME = "reurb_matipo_mg", VERSAO = 1; let bd = null;
+      function abrir() {
+        if (bd) return Promise.resolve(bd);
+        return new Promise((ok, erro) => {
+          const r = indexedDB.open(NOME, VERSAO);
+          r.onupgradeneeded = () => {
+            const d = r.result;
+            if (!d.objectStoreNames.contains("fichas")) { const s = d.createObjectStore("fichas", { keyPath: "id" }); s.createIndex("status", "status"); s.createIndex("criadoEm", "criadoEm") }
+            if (!d.objectStoreNames.contains("docs")) { const s = d.createObjectStore("docs", { keyPath: "id" }); s.createIndex("ficha_id", "ficha_id") }
+            if (!d.objectStoreNames.contains("usuarios")) { const s = d.createObjectStore("usuarios", { keyPath: "id" }); s.createIndex("email", "email", { unique: true }) }
+            if (!d.objectStoreNames.contains("meta")) { d.createObjectStore("meta", { keyPath: "chave" }) }
+          };
+          r.onsuccess = () => { bd = r.result; ok(bd) };
+          r.onerror = () => erro(r.error)
+        })
+      }
+      const prom = req => new Promise((ok, erro) => { req.onsuccess = () => ok(req.result); req.onerror = () => erro(req.error) });
+      async function tx(lojas, modo) { await abrir(); return bd.transaction(lojas, modo) }
+      async function put(l, v) { const t = await tx(l, "readwrite"); return prom(t.objectStore(l).put(v)) }
+      async function get(l, k) { const t = await tx(l, "readonly"); return prom(t.objectStore(l).get(k)) }
+      async function todos(l) { const t = await tx(l, "readonly"); return prom(t.objectStore(l).getAll()) }
+      async function remover(l, k) { const t = await tx(l, "readwrite"); return prom(t.objectStore(l).remove(k)) }
+      async function indice(l, i, v) { const t = await tx(l, "readonly"); return prom(t.objectStore(l).index(i).getAll(v)) }
+      async function contar(l) { const t = await tx(l, "readonly"); return prom(t.objectStore(l).count()) }
+      async function limpar(l) { const t = await tx(l, "readwrite"); return prom(t.objectStore(l).clear()) }
+      async function proximoNumero() {
+        await abrir();
+        return new Promise((ok, erro) => {
+          const t = bd.transaction("meta", "readwrite"); const s = t.objectStore("meta");
+          const q = s.get("numero"); q.onsuccess = () => { const n = ((q.result && q.result.valor) || 0) + 1; s.put({ chave: "numero", valor: n }); ok(n) };
+          q.onerror = () => erro(q.error)
+        })
+      }
+      return { abrir, put, get, todos, remover, indice, contar, limpar, proximoNumero };
+    })();
+
+    /* ------------------------------------------------------------- sessão */
+    function hash(s) { let h = 5381; for (let i = 0; i < s.length; i++)h = ((h << 5) + h) ^ s.charCodeAt(i); return (h >>> 0).toString(16) }
+    function usuarioAtual() { try { return JSON.parse(sessionStorage.getItem("reurb_sessao") || "null") } catch (e) { return null } }
+    function salvarSessao(u) { sessionStorage.setItem("reurb_sessao", JSON.stringify({ id: u.id, nome: u.nome, email: u.email, papel: u.papel })) }
+    function sairSessao() { sessionStorage.removeItem("reurb_sessao"); atualizarBarraSessao(); toast("Sessão encerrada.") }
+    function atualizarBarraSessao() {
+      const u = usuarioAtual(); const box = $("#sessaoBox");
+      if (u) { box.classList.remove("hide"); $("#sessaoNome").textContent = u.nome.split(" ")[0] + " · " + (u.papel === "admin" ? "admin" : "cadastrador") }
+      else box.classList.add("hide");
+      // atualiza o campo "Cadastrador" do rascunho ainda não salvo
+      if (!d.numero && d.id && $("#vN").querySelector(".nav-etapas")) {
+        const nome = u ? u.nome : "";
+        if ((d.cadastrador || "") !== nome) { d.cadastrador = nome; render() }
+      }
+    }
+    $("#btnSair").onclick = sairSessao;
+
+    async function entrarModal() {
+      const m = ov(`
+  <h3>Entrar no sistema</h3><p>Área restrita ao administrador (cliente) e aos cadastradores.</p>
+  <div style="margin-top:14px">
+    <label class="f">E-mail<input type="email" id="lgEmail" placeholder="nome@escriturar.com.br" autocomplete="username"></label>
+    <label class="f">Senha<input type="password" id="lgSenha" autocomplete="current-password"></label>
+    <p id="lgErro" style="display:none;color:var(--perigo);font-size:13.5px;font-weight:600"></p>
+    <p style="font-size:12.5px;color:var(--tinta-2)">Demonstração: <b>admin@escriturar.com.br</b> / <b>admin123</b></p>
+  </div>
+  <div class="mo-acoes"><button class="btn fantasma" data-x>Cancelar</button><button class="btn" id="lgOk">Entrar</button></div>`);
+      const erro = m.mo.querySelector("#lgErro");
+      const tentar = async () => {
+        const email = m.mo.querySelector("#lgEmail").value.trim().toLowerCase();
+        const senha = m.mo.querySelector("#lgSenha").value;
+        const lista = await BD.todos("usuarios");
+        const u = lista.find(x => x.email === email && x.senha === hash(senha));
+        if (!u) { erro.textContent = "E-mail ou senha inválidos."; erro.style.display = "block"; return }
+        if (u.ativo === false) { erro.textContent = "Usuário desativado."; erro.style.display = "block"; return }
+        salvarSessao(u); m.fechar(); atualizarBarraSessao();
+        toast("Bem-vindo, " + u.nome.split(" ")[0] + "!");
+        if ($("#vP").classList.contains("hide") === false) renderPainel()
+      };
+      m.mo.querySelector("#lgOk").onclick = tentar;
+      m.mo.querySelector("#lgSenha").onkeydown = e => { if (e.key === "Enter") tentar() };
+      m.mo.querySelector("#lgEmail").focus()
+    }
+
+    /* ================================================================ fotos */
+    const cacheFotos = new Map();      // id -> {blob,url,thumb}
+    const urlFotos = new Map();        // id -> objectURL
+    function fotoURL(id) {
+      if (urlFotos.has(id)) return urlFotos.get(id);
+      const f = cacheFotos.get(id); if (!f) return "";
+      const u = URL.createObjectURL(f.blob); urlFotos.set(id, u); return u
+    }
+    function thumbURL(id) { const f = cacheFotos.get(id); return f && f.thumb ? f.thumb : urlFotos.get(id) || "" }
+
+    async function carregarDocsDaFicha(ficha) {
+      const lista = await BD.indice("docs", "ficha_id", ficha.id);
+      for (const d of lista) if (!cacheFotos.has(d.id)) cacheFotos.set(d.id, { blob: d.blob, thumb: d.thumb });
+      const mapa = {}; for (const k in ficha.fotos || {}) mapa[k] = [];
+      for (const d of lista) { (mapa[d.tipo] = mapa[d.tipo] || []).push(d.id) }
+      return mapa;
+    }
+    function comprimir(file, max, qual) {
+      return new Promise((ok, erro) => {
+        const img = new Image(); const url = URL.createObjectURL(file);
+        img.onload = () => {
+          const m = max || 1800, s = Math.min(1, m / Math.max(img.width, img.height));
+          const c = document.createElement("canvas"); c.width = Math.max(1, Math.round(img.width * s)); c.height = Math.max(1, Math.round(img.height * s));
+          const x = c.getContext("2d"); x.fillStyle = "#fff"; x.fillRect(0, 0, c.width, c.height); x.drawImage(img, 0, 0, c.width, c.height);
+          URL.revokeObjectURL(url);
+          c.toBlob(b => b ? ok(b) : erro(new Error("falha ao converter")), "image/jpeg", qual || .82)
+        };
+        img.onerror = () => { URL.revokeObjectURL(url); erro(new Error("imagem inválida")) };
+        img.src = url
+      })
+    }
+    async function guardarFoto(fichaId, tipo, file) {
+      const principal = await comprimir(file, 1800, .82);
+      const mini = await comprimir(file, 340, .72);
+      const id = uid();
+      await BD.put("docs", { id, ficha_id: fichaId, tipo, nome: file.name || tipo, blob: principal, thumb: mini, criadoEm: Date.now() });
+      cacheFotos.set(id, { blob: principal, thumb: mini });
+      return id
+    }
+    async function apagarFoto(id) {
+      const f = cacheFotos.get(id);
+      if (f && urlFotos.has(id)) { URL.revokeObjectURL(urlFotos.get(id)); urlFotos.delete(id) }
+      cacheFotos.delete(id); await BD.remover("docs", id)
+    }
+    const DOCS = [["rgcpf", "RG e CPF (ou CNH) dos titulares", "Requerente e cônjuge · obrigatório para finalizar", true],
+    ["certidao", "Certidão de nascimento ou casamento", "Solteiro(a): nascimento — Casado(a): casamento", false],
+    ["resid", "Comprovante de residência atual", "Conta de água ou luz dos últimos 3 meses", false],
+    ["posseDoc", "Documento de comprovação da posse", "Contrato, recibo, proclama, declaração…", false],
+    ["posseAntiga", "Comprovante de tempo de posse antigo", "Contas antigas, carnês de IPTU, histórico de ligação", false],
+    ["rendaDoc", "Comprovante de renda dos moradores", "De todos os moradores que trabalham", false],
+    ["outros", "Outros / foto da fachada do imóvel", "Fotos complementares do lote", false]];
+
+    /* ============================================================= formulário */
+    const SECOES = [
+      {
+        t: "Núcleo e localização do imóvel", s: "Identificação da ficha e endereço do lote", f: [
+          ["ficha", "Ficha Nº", "auto"], ["data", "Data", "date"], ["cadastrador", "Cadastrador", "auto"],
+          ["modalidade", "Modalidade", "r", ["REURB-S", "REURB-E"]],
+          ["nucleo", "Nome do núcleo urbano / bairro", "text"],
+          ["endereco", "Endereço (Rua/Av.)", "text"], ["numero_end", "Nº", "text"], ["compl", "Complemento", "text"],
+          ["quadra", "Quadra", "text"], ["lote", "Lote", "text"], ["iptu", "Inscrição Imobiliária (IPTU)", "text"]]
+      },
+      {
+        t: "Requerente / Beneficiário", s: "Dados civil completos do titular", f: [
+          ["nome", "Nome completo", "text"], ["cpf", "CPF", "cpf"], ["rg", "RG", "text"], ["orgao", "Órgão / UF", "text"],
+          ["nasc", "Data de nascimento", "date"], ["nacio", "Nacionalidade", "text"], ["natur", "Naturalidade", "text"],
+          ["prof", "Profissão", "text"], ["tel", "Telefone / WhatsApp", "tel"], ["email", "E-mail", "email"],
+          ["mae", "Filiação (mãe)", "text"],
+          ["civil", "Estado civil", "r", ["Solteiro(a)", "Casado(a)", "União Estável", "Divorciado(a)", "Viúvo(a)"]]]
+      },
+      {
+        t: "Cônjuge / Companheiro(a)", s: "Preencher quando houver casamento ou união estável",
+        show: d => ["Casado(a)", "União Estável"].includes(d.civil), f: [
+          ["cNome", "Nome completo", "text"], ["cCpf", "CPF", "cpf"], ["cRg", "RG", "text"], ["cOrgao", "Órgão / UF", "text"],
+          ["cNasc", "Data de nascimento", "date"], ["cProf", "Profissão", "text"], ["cNacio", "Nacionalidade", "text"],
+          ["regime", "Regime de bens", "r", ["Comunhão Parcial", "Comunhão Universal", "Separação Total"], d => d.civil === "Casado(a)"]]
+      },
+      {
+        t: "Situação jurídica e histórico da posse", s: "Como o morador ocupa e comprova o terreno", f: [
+          ["posse", "Tipo de documento de posse", "r", ["Contrato de Compra e Venda (Gaveta)", "Recibo / Recibo de Quitação", "Declaração de Posse", "Escritura Pública não registrada", "Doação / Herança", "Não possui documento escrito"]],
+          ["dPosse", "Data de aquisição / início da posse", "date"], ["tempo", "Tempo de residência (anos)", "number"],
+          ["transm", "Adquiriu a posse de quem? (transmitente)", "text"],
+          ["outroImovel", "Possui outro imóvel urbano ou rural no país?", "r", SIM_NAO],
+          ["beneficiado", "Já foi beneficiado por programa de regularização fundiária ou habitação?", "r", SIM_NAO]]
+      },
+      {
+        t: "Edificação e infraestrutura", s: "O que existe construído e os serviços disponíveis", f: [
+          ["uso", "Uso do imóvel", "r", ["Residencial", "Comercial/Serviço", "Misto", "Lote Vago/Sem Edificação"]],
+          ["constr", "Tipo de construção", "r", ["Alvenaria", "Madeira/Mista", "Outro"]],
+          ["constrOutro", "Especifique o tipo de construção", "text", null, d => d.constr === "Outro"],
+          ["pav", "Nº de pavimentos", "number"],
+          ["infra", "Infraestrutura existente", "c", ["Água encanada COPASA", "Energia elétrica CEMIG", "Rede de esgoto", "Iluminação pública", "Coleta de lixo", "Pavimentação asfáltica/calçamento"]]]
+      },
+      {
+        t: "Perfil socioeconômico familiar", s: "Composição e renda do domicílio (REURB-S)", f: [
+          ["pessoas", "Nº de pessoas que residem no imóvel", "number"],
+          ["faixa", "Renda familiar mensal", "r", ["Até 1 SM", "1 a 3 SM", "3 a 5 SM", "Acima de 5 SM"]],
+          ["renda", "Renda bruta familiar exata estimada (R$)", "text"],
+          ["benef", "Benefício social", "c", ["Não", "Bolsa Família", "BPC/LOAS", "Auxílio-Doença/Outros"]]]
+      }
+    ];
+    const DECLARACAO = "Declaro, sob as penas da lei (Art. 299 do Código Penal), que as informações prestadas neste cadastro são verdadeiras, estando ciente de que a falsidade destas informações ensejará o cancelamento do processo de regularização fundiária do imóvel, sem prejuízo das sanções civis e criminais cabíveis. Autorizo a empresa Escriturar Soluções Fundiárias Ltda. a realizar vistorias técnicas, medições e levantamentos em meu lote para os fins exclusivos da REURB urbano de Matipó/MG.";
+
+    const NAV = [
+      { n: "01", t: "Núcleo" }, { n: "02", t: "Requerente" }, { n: "03", t: "Cônjuge" },
+      { n: "04", t: "Posse" }, { n: "05", t: "Edificação" }, { n: "06", t: "Socioeconômico" },
+      { n: "07", t: "Documentos" }, { n: "08", t: "Declaração" }];
+    const OBRIG = { 0: ["nucleo", "endereco", "quadra", "lote"], 1: ["nome", "cpf"], 2: ["cNome", "cCpf"] };
+
+    let d = {}, salvando = false, assina = {};
+
+    function novaFicha() {
+      d = {
+        id: uid(), data: HOJE(), cadastrador: (usuarioAtual() || {}).nome || "", modalidade: "REURB-S",
+        status: "Rascunho", fotos: {}, sig: {}, consent: false, criadoEm: Date.now()
+      };
+      assina = {}
+    }
+
+    function valor(k) {
+      if (k === "ficha") return d.numero ? ord(d.numero) + " / 2026" : "a gerar";
+      if (k === "cadastrador") return d.cadastrador || "—";
+      const v = d[k];
+      return Array.isArray(v) ? v.join(", ") : (v == null ? "" : v)
+    }
+
+    /* -------------------------------------------------------- campos HTML */
+    function campoHTML(f) {
+      const k = f[0], rot = f[1], t = f[2] || "text", op = f[3], cond = f[4];
+      const oc = cond && !cond(d) ? " hide" : "";
+      if (t === "r" || t === "c") {
+        const ty = t === "r" ? "radio" : "checkbox";
+        const vals = t === "r" ? [d[k]] : (Array.isArray(d[k]) ? d[k] : []);
+        return '<div class="grp' + oc + '" data-k="' + k + '" data-cond="' + (cond ? 1 : 0) + '"><span>' + esc(rot) + '</span><div class="chips">' +
+          op.map(o => '<label class="chip"><input type="' + ty + '" name="' + k + '" value="' + esc(o) + '"' + (vals.includes(o) ? " checked" : "") + '><span>' + esc(o) + '</span></label>').join("") +
+          '</div></div>'
+      }
+      const ty = { date: "date", number: "number", tel: "tel", email: "email" }[t] || "text";
+      const im = (t === "cpf" || t === "number" || t === "tel") ? ' inputmode="numeric"' : "";
+      const ro = t === "auto" ? " readonly" : "";
+      const val = t === "auto" ? esc(valor(k)) : t === "tel" ? maskTel(d[k] || "") : t === "cpf" ? maskCPF(d[k] || "") : esc(d[k] == null ? "" : d[k]);
+      return '<label class="f' + oc + '" data-k="' + k + '" data-cond="' + (cond ? 1 : 0) + '">' + esc(rot) +
+        '<input type="' + ty + '"' + im + ro + ' data-k="' + k + '" value="' + val + '"><span class="msg-erro">Campo obrigatório.</span></label>'
+    }
+
+    function marcarErro(k, msg) {
+      const el = $('[data-k="' + k + '"]'); if (!el) return;
+      el.classList.add("erro"); const m = el.querySelector(".msg-erro"); if (m && msg) m.textContent = msg
+    }
+    function limparErro(k) { const el = $('[data-k="' + k + '"]'); if (el) el.classList.remove("erro") }
+
+    /* --------------------------------------------------------- renderizar */
+    function render() {
+      if (!d || !d.id) return;
+      d.fotos = d.fotos || {}; d.sig = d.sig || {};
+      let h = navHTML();
+      SECOES.forEach((s, i) => {
+        h += '<section class="card" id="sec-' + i + '">' +
+          '<div class="secao-t"><span class="secao-n">' + ord(i + 1, 2) + '</span>' +
+          '<div><h2>' + esc(s.t) + '</h2><p>' + esc(s.s) + '</p></div></div>';
+        if (i === 2) {
+          h += '<div class="grade g2" id="conjCampos">' + s.f.map(campoHTML).join("") + '</div>' +
+            '<div class="nota hide" id="conjNota">Esta etapa só se aplica a estados civis <b>Casado(a)</b> ou <b>União Estável</b> — pode seguir em frente sem preenchê-la.</div>';
+        } else {
+          h += '<div class="grade g2">' + s.f.map(campoHTML).join("") + '</div>'
+        }
+        h += '</section>';
+      });
+      h += docsHTML();
+      h += declHTML();
+      h += acoesHTML();
+      h += minhasFichasHTML();
+      $("#vN").innerHTML = h;
+      cond();
+      iniciarAssinaturas();
+      marcarSecaoAtiva();
+    }
+    function docsHTML() {
+      return '<section class="card" id="sec-6">' +
+        '<div class="secao-t"><span class="secao-n">07</span>' +
+        '<div><h2>Documentos (fotos)</h2><p>Fotografe na hora — a câmera traseira do celular abre ao tocar no botão</p></div></div>' +
+        DOCS.map(([k, rot, dica]) => {
+          const n = (d.fotos[k] || []).length;
+          return '<div class="ph' + (n ? " ok" : "") + '" data-doc="' + k + '"><div class="ph-topo"><div><b>' + esc(rot) + '</b><small>' + esc(dica) + '</small></div><div class="check-ok"></div></div>' +
+            '<div class="ph-acoes"><button class="btn sm" data-cam="' + k + '">Tirar foto</button>' +
+            '<button class="btn sm linha" data-gal="' + k + '">Anexar arquivo</button>' +
+            '<span class="qtd">' + (n ? n + " foto(s)" : "nenhuma foto") + '</span></div>' +
+            '<div class="barra-envio hide"><i></i></div><div class="miniaturas">' + miniaturasHTML(k) + '</div></div>'
+        }).join("") +
+        '</section>'
+    }
+    function declHTML() {
+      return '<section class="card" id="sec-7">' +
+        '<div class="secao-t"><span class="secao-n">08</span>' +
+        '<div><h2>Declaração e assinatura</h2><p>Termo de veracidade e consentimento LGPD</p></div></div>' +
+        '<p class="declaracao">' + DECLARACAO + '</p>' +
+        '<label class="lgpd"><input type="checkbox" id="consent"' + (d.consent ? " checked" : "") + '>' +
+        '<span>Autorizo o tratamento dos meus dados pessoais (nome, CPF, RG, renda e imagens de documentos) pela Escriturar Soluções Fundiárias Ltda. para os fins da regularização fundiária — conforme a LGPD (Lei 13.709/2018).</span></label>' +
+        '<div style="margin-top:18px">' + assHTML("req", "Assinatura do requerente") +
+        '<div id="conjAssin" class="hide">' + assHTML("conj", "Assinatura do cônjuge / companheiro(a)") + '</div></div>' +
+        '<div class="local-data">Matipó/MG, ' + dataBR(HOJE()) + '.</div></section>'
+    }
+    function assHTML(k, rot) {
+      return '<div class="assinatura"><div class="linha-topo"><span class="rot">' + esc(rot) + '</span>' +
+        '<button class="btn sm fantasma" type="button" data-limpar="' + k + '">Limpar</button></div>' +
+        '<canvas class="sig" data-s="' + k + '"></canvas><div class="canvas-nota"><span>Assine acima da linha</span><span>Obrigatório</span></div></div>'
+    }
+
+    function navHTML() {
+      return '<nav class="nav-etapas">' +
+        NAV.map((n, i) => '<button data-ir="' + i + '"><b>' + n.n + '</b>' + esc(n.t) + '</button>').join("") +
+        '<span class="selo"><span class="selo-auto espera" id="selo">· rascunho</span></span></nav>'
+    }
+    function acoesHTML() {
+      return '<div class="acoes-finais"><button class="btn fantasma" id="btnSalvar">Salvar rascunho</button>' +
+        '<button class="btn" id="btnFinal">Finalizar ficha</button></div>'
+    }
+    function marcarSecaoAtiva() {
+      const bts = document.querySelectorAll(".nav-etapas [data-ir]"); if (!bts.length) return;
+      const lim = Math.max(220, window.innerHeight * .35);
+      let atual = 0;
+      NAV.forEach((n, i) => {
+        const el = document.getElementById("sec-" + i);
+        if (el && el.getBoundingClientRect().top <= lim) atual = i
+      });
+      bts.forEach((b, i) => b.classList.toggle("on", i === atual))
+    }
+    window.addEventListener("scroll", () => {
+      clearTimeout(window.__tSec);
+      window.__tSec = setTimeout(marcarSecaoAtiva, 70)
+    }, { passive: true });
+    function miniaturasHTML(k) {
+      return (d.fotos[k] || []).map((id, i) => '<span class="mini"><img src="' + fotoURL(id) + '" alt="documento" data-zoom="' + k + ':' + i + '">' +
+        '<button class="x" data-rm="' + k + ':' + i + '" title="Remover">×</button></span>').join("")
+    }
+
+    function minhasFichasHTML() { return '<div class="card lista-fichas" id="minhas"><div class="legenda-topo">Fichas neste dispositivo</div><div id="listaFichas"></div></div>' }
+    async function renderLista() {
+      const box = $("#listaFichas"); if (!box) return;
+      const todas = (await BD.todos("fichas")).sort((a, b) => (b.criadoEm || 0) - (a.criadoEm || 0));
+      const u = usuarioAtual();
+      const minhas = u && u.papel !== "admin" ? todas.filter(f => f.cadastrador === u.nome) : todas;
+      if (!minhas.length) { box.innerHTML = '<p style="font-size:13.5px;color:var(--tinta-2)">Nenhuma ficha salva ainda.</p>'; return }
+      box.innerHTML = minhas.slice(0, 8).map(f => '<div class="li" data-abrir="' + f.id + '"><div><span class="num">Nº ' + ord(f.numero) + '</span> <b>' + esc(f.nome || "(sem nome)") + '</b>' +
+        '<small>' + esc(f.nucleo || "—") + ' · Q ' + esc(f.quadra || "-") + ' L ' + esc(f.lote || "-") + ' · ' + dataBR(f.data || "") + '</small></div>' +
+        '<div style="text-align:right">' + stampHTML(f.status) + '<small>' + ((f.fotos && Object.values(f.fotos).flat().length) || 0) + ' fotos</small></div></div>').join("");
+      box.querySelectorAll("[data-abrir]").forEach(el => el.onclick = () => abrirFicha(el.dataset.abrir))
+    }
+    function stampHTML(st) {
+      const m = { "Rascunho": "rascunho", "Recebida": "reb", "Em análise": "an", "Pendente de documentos": "pen", "Aprovada": "apr" };
+      const cls = { rascunho: "s-rascunho", reb: "s-recebida", an: "s-analise", pen: "s-pendente", apr: "s-aprovada" }[m[st] || "rascunho"];
+      return '<span class="stamp ' + cls + '">' + esc(st || "Rascunho") + '</span>'
+    }
+
+    /* ------------------------------------------------------- condicionais */
+    function cond() {
+      SECOES.forEach(s => s.f.forEach(f => {
+        if (!f[4]) return;
+        const el = $('[data-k="' + f[0] + '"]'); if (el) el.classList.toggle("hide", !f[4](d))
+      }));
+      const casado = ["Casado(a)", "União Estável"].includes(d.civil);
+      const cm = $("#conjCampos"), cn = $("#conjNota"), ca = $("#conjAssin");
+      if (cm) cm.classList.toggle("hide", !casado);
+      if (cn) cn.classList.toggle("hide", casado);
+      if (ca) ca.classList.toggle("hide", !casado)
+    }
+
+    function onInput(e) {
+      const el = e.target;
+      if (el.id === "consent") { d.consent = el.checked; agendarSalvar(); return }
+      const k = el.dataset.k || el.name;
+      if (!k) return;
+      if (el.type === "radio") { d[k] = el.value }
+      else if (el.type === "checkbox" && el.name) {
+        d[k] = Array.from(document.querySelectorAll('input[name="' + k + '"]:checked')).map(x => x.value)
+      }
+      else {
+        if (k === "cpf") { el.value = maskCPF(el.value); d[k] = sóDigitos(el.value) }
+        else if (k === "tel") { el.value = maskTel(el.value); d[k] = el.value }
+        else if (k === "cCpf") { el.value = maskCPF(el.value); d[k] = sóDigitos(el.value) }
+        else d[k] = el.value;
+        if (String(d[k]).trim() !== "") limparErro(k);
+      }
+      cond(); agendarSalvar()
+    }
+
+    let tSalvar = null;
+    function agendarSalvar() {
+      const s = $("#selo"); if (s) { s.textContent = "· salvando…"; s.classList.remove("espera") }
+      clearTimeout(tSalvar); tSalvar = setTimeout(salvar, 700)
+    }
+    async function salvar(manterStatus) {
+      if (!d || !d.id) return;
+      const rec = {}; for (const k in d) rec[k] = d[k];
+      if (!rec.numero) rec.numero = await BD.proximoNumero();
+      if (!rec.status) rec.status = "Rascunho";
+      if (!rec.historico) rec.historico = [{ a: "Ficha criada", u: (usuarioAtual() || {}).nome || rec.cadastrador || "Cadastrador", q: agoraBR() }];
+      rec.atualizadoEm = Date.now();
+      await BD.put("fichas", rec);
+      d.numero = rec.numero;
+      const s = $("#selo"); if (s) { s.textContent = "· salvo às " + agoraBR().slice(11); s.classList.add("espera") }
+      renderLista();
+      return rec
+    }
+
+    /* -------------------------------------------------------- validação */
+    function secVisivel(i) { const s = SECOES[i]; return !s.show || s.show(d) }
+    function validarFinal() {
+      const faltas = [];
+      [0, 1, 2].forEach(i => {
+        if (!secVisivel(i)) return;
+        (OBRIG[i] || []).forEach(k => {
+          const v = String(d[k] == null ? "" : d[k]).trim();
+          limparErro(k);
+          if (!v) { faltas.push(SECOES[i].f.find(x => x[0] === k)[1]); marcarErro(k) }
+        })
+      });
+      if (d.cpf && !validaCPF(d.cpf)) { marcarErro("cpf", "CPF inválido — confira os números."); faltas.push("CPF do requerente inválido") }
+      if (!((d.fotos || {}).rgcpf || []).length) faltas.push("pelo menos uma foto de RG/CPF");
+      if (!d.consent) faltas.push("consentimento LGPD");
+      if (!d.sig || !d.sig.req) faltas.push("assinatura do requerente");
+      if (["Casado(a)", "União Estável"].includes(d.civil) && (!d.sig || !d.sig.conj)) faltas.push("assinatura do cônjuge");
+      return faltas
+    }
+
+    /* -------------------------------------------------------- assinaturas */
+    function iniciarAssinaturas() {
+      assina = {};
+      $$("canvas.sig").forEach(c => {
+        const quadro = c.parentElement;
+        const preparar = () => {
+          const r = c.getBoundingClientRect(); const dpr = window.devicePixelRatio || 1;
+          c.width = Math.max(1, Math.round(r.width * dpr)); c.height = Math.max(1, Math.round(r.height * dpr));
+          const x = c.getContext("2d"); x.scale(dpr, dpr); x.lineWidth = 2.4; x.lineCap = "round"; x.lineJoin = "round";
+          x.strokeStyle = "#1f2019"; return x
+        };
+        let x = preparar(), on = false, pt = null;
+        const pos = e => { const r = c.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top] };
+        const ini = e => { on = true; c.setPointerCapture && c.setPointerCapture(e.pointerId); pt = pos(e); x.beginPath(); x.moveTo(pt[0], pt[1]); e.preventDefault() };
+        const mov = e => { if (!on) return; const p = pos(e); x.beginPath(); x.moveTo(pt[0], pt[1]); x.lineTo(p[0], p[1]); x.stroke(); pt = p; e.preventDefault() };
+        const fim = () => { if (!on) return; on = false; d.sig = d.sig || {}; d.sig[c.dataset.s] = c.toDataURL("image/png"); agendarSalvar() };
+        c.onpointerdown = ini; c.onpointermove = mov; c.onpointerup = fim; c.onpointercancel = fim;
+        const anterior = d.sig && d.sig[c.dataset.s];
+        if (anterior) { const im = new Image(); im.onload = () => x.drawImage(im, 0, 0, c.getBoundingClientRect().width, c.getBoundingClientRect().height); im.src = anterior }
+        assina[c.dataset.s] = { c, limpar: () => { x.clearRect(0, 0, c.width, c.height); if (d.sig) delete d.sig[c.dataset.s] } }
+      })
+    }
+
+    /* ---------------------------------------------------------- fotos UI */
+    let alvoDoc = null;
+    async function receberArquivos() {
+      const inp = $("#fileCam"), g = $("#fileGal");
+      const k = alvoDoc;
+      const caixa = k ? $('[data-doc="' + k + '"]') : null;
+      const barra = caixa ? caixa.querySelector(".barra-envio") : null, fill = barra ? barra.querySelector("i") : null;
+      const arquivos = Array.from(inp.files || []).concat(Array.from(g.files || [])).filter(f => f.type.startsWith("image/"));
+      inp.value = ""; g.value = "";
+      if (!arquivos.length || !caixa) return;
+      barra.classList.remove("hide");
+      for (let i = 0; i < arquivos.length; i++) {
+        fill.style.width = Math.round(i / arquivos.length * 100) + "%";
+        try {
+          const id = await guardarFoto(d.id, k, arquivos[i]);
+          d.fotos = d.fotos || {}; (d.fotos[k] = d.fotos[k] || []).push(id);
+        } catch (e) { toast("Falha ao processar " + arquivos[i].name + ": " + e.message, "erro") }
+      }
+      fill.style.width = "100%";
+      await salvar();
+      setTimeout(() => barra.classList.add("hide"), 450);
+      atualizarBlocoDoc(k);
+      toast(arquivos.length + " foto(s) salva(s) neste dispositivo.", "")
+    }
+    function atualizarBlocoDoc(k) {
+      const caixa = $('[data-doc="' + k + '"]'); if (!caixa) return;
+      const n = (d.fotos[k] || []).length;
+      caixa.classList.toggle("ok", !!n);
+      caixa.querySelector(".qtd").textContent = n ? n + " foto(s)" : "nenhuma foto";
+      caixa.querySelector(".miniaturas").innerHTML = miniaturasHTML(k)
+    }
+
+    async function abrirFicha(id) {
+      const f = await BD.get("fichas", id); if (!f) { toast("Ficha não encontrada.", "erro"); return }
+      d = Object.assign({}, f);
+      d.fotos = d.fotos || {}; d.sig = d.sig || {};
+      d.fotos = await carregarDocsDaFicha(f) || {};
+      render(); renderLista(); window.scrollTo({ top: 0, behavior: "smooth" });
+      const u = usuarioAtual();
+      if (u && u.papel !== "admin" && ["Aprovada", "Em análise"].includes(f.status))
+        toast("Ficha em análise/aprovada — alterações serão revisadas pelo administrador.", "aviso", 4200);
+      else toast("Ficha nº " + ord(f.numero) + " aberta.", "")
+    }
+
+    /* -------------------------------------------------------- navegação */
+    function irPara(i) {
+      const el = document.getElementById("sec-" + i);
+      if (!el) { window.scrollTo({ top: 0, behavior: "smooth" }); return }
+      el.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+
+    async function finalizar() {
+      const faltas = validarFinal();
+      if (faltas.length) {
+        toast("Faltam: " + faltas.join(", ") + ".", "erro", 5000);
+        if (!((d.fotos || {}).rgcpf || []).length) irPara(6);
+        else if (!d.consent || !d.sig || !d.sig.req) irPara(7);
+        else { const el = $("#vN .erro"); if (el) el.scrollIntoView({ behavior: "smooth", block: "center" }) }
+        return
+      }
+      d.status = "Recebida";
+      d.atualizadoEm = Date.now();
+      if (!d.numero) d.numero = await BD.proximoNumero();
+      const rec = {}; for (const k in d) rec[k] = d[k];
+      rec.historico = (rec.historico || []).concat([{ a: "Ficha enviada", u: (usuarioAtual() || {}).nome || "Cadastrador", q: agoraBR() }]);
+      await BD.put("fichas", rec);
+      const m = ov("<h3>Ficha nº " + ord(rec.numero) + " enviada</h3><p>Status alterado para <b>Recebida</b>. O administrador poderá consultar e imprimir no painel.</p>" +
+        '<div class="mo-acoes"><button class="btn fantasma" data-nova>Nova ficha</button><button class="btn" data-ok>Continuar editando</button></div>');
+      m.mo.querySelector("[data-ok]").onclick = m.fechar;
+      m.mo.querySelector("[data-nova]").onclick = () => { m.fechar(); novaFicha(); render(); renderLista(); window.scrollTo(0, 0) };
+      renderLista()
+    }
+
+    /* ---------------------------------------------------- eventos globais */
+    $("#vN").addEventListener("input", onInput);
+    $("#vN").addEventListener("change", onInput);
+    $("#vN").addEventListener("click", async e => {
+      const alvo = e.target.closest("button,[data-zoom],[data-rm]");
+      if (!alvo) return;
+      if (alvo.dataset.ir !== undefined) { irPara(+alvo.dataset.ir); return }
+      if (alvo.id === "btnSalvar") { salvar().then(() => toast("Rascunho salvo neste dispositivo.", "")); return }
+      if (alvo.id === "btnFinal") { finalizar(); return }
+      if (alvo.dataset.limpar) { const a = assina[alvo.dataset.limpar]; if (a) { a.limpar(); toast("Assinatura apagada.", "") } return }
+      if (alvo.dataset.cam || alvo.dataset.gal) {
+        alvoDoc = alvo.dataset.cam || alvo.dataset.gal;
+        if (alvo.dataset.cam) $("#fileCam").click(); else $("#fileGal").click(); return
+      }
+      if (alvo.dataset.rm) {
+        const [k, i] = alvo.dataset.rm.split(":");
+        const id = d.fotos[k][+i];
+        if (await confirmar("Remover foto", "Excluir esta foto da ficha?", "Excluir")) {
+          await apagarFoto(id); d.fotos[k].splice(+i, 1); await salvar(); atualizarBlocoDoc(k)
+        }
+        return
+      }
+      if (alvo.dataset.zoom) {
+        const [k, i] = alvo.dataset.zoom.split(":");
+        const ids = d.fotos[k] || [];
+        const rot = (DOCS.find(x => x[0] === k) || [])[1] || "Documento";
+        lightbox(ids, +i, rot, d.nome || "")
+      };
+    });
+    $("#fileCam").onchange = () => receberArquivos();
+    $("#fileGal").onchange = () => receberArquivos();
+
+    /* ---------------------------------------------------------- lightbox */
+    function lightbox(ids, inicio, legenda, titular) {
+      if (!ids.length) return;
+      let i = Math.max(0, inicio), zoom = 1;
+      const box = document.createElement("div"); box.className = "lbx";
+      box.innerHTML = '<div class="lbx-topo"><b>' + esc(legenda) + '</b><span id="lbxCnt"></span>' +
+        '<span style="margin-left:auto;font-size:12px;opacity:.8">' + esc(titular) + '</span>' +
+        '<button class="btn sm fantasma" data-fechar>Fechar</button></div>' +
+        '<div class="lbx-corpo"><button class="lbx-nav e">‹</button><img id="lbxImg" alt="' + esc(legenda) + '"><button class="lbx-nav d">›</button></div>' +
+        '<div class="lbx-pe"><button class="btn sm" data-z1>−</button><button class="btn sm" id="lbxZ">100%</button>' +
+        '<button class="btn sm" data-z2>+</button><button class="btn sm" data-ajus>Ajustar</button>' +
+        '<button class="btn sm" data-baix>Baixar foto</button></div>';
+      document.body.appendChild(box); document.body.style.overflow = "hidden";
+      const img = box.querySelector("#lbxImg");
+      const mostrar = () => {
+        zoom = 1; img.style.transform = "scale(1)"; box.querySelector("#lbxZ").textContent = "100%";
+        img.src = fotoURL(ids[i]); box.querySelector("#lbxCnt").textContent = (i + 1) + " / " + ids.length
+      };
+      const fechar = () => { box.remove(); document.body.style.overflow = ""; document.removeEventListener("keydown", tecla) };
+      const nz = v => { zoom = Math.max(1, Math.min(6, v)); img.style.transform = "scale(" + zoom + ")"; box.querySelector("#lbxZ").textContent = Math.round(zoom * 100) + "%" };
+      function tecla(ev) { if (ev.key === "Escape") fechar(); if (ev.key === "ArrowLeft") ant(); if (ev.key === "ArrowRight") prox() }
+      const ant = () => { i = (i - 1 + ids.length) % ids.length; mostrar() };
+      const prox = () => { i = (i + 1) % ids.length; mostrar() };
+      box.querySelector("[data-fechar]").onclick = fechar;
+      box.querySelector(".lbx-nav.e").onclick = ant; box.querySelector(".lbx-nav.d").onclick = prox;
+      box.querySelector("[data-z1]").onclick = () => nz(zoom - .5);
+      box.querySelector("[data-z2]").onclick = () => nz(zoom + .5);
+      box.querySelector("[data-ajus]").onclick = () => nz(1);
+      box.querySelector("[data-baix]").onclick = () => {
+        const a = document.createElement("a"); a.href = fotoURL(ids[i]); a.download = slug(legenda) + "-" + (i + 1) + ".jpg"; a.click()
+      };
+      box.addEventListener("click", e => { if (e.target === box || e.target.className === "lbx-corpo") fechar() });
+      box.querySelector(".lbx-corpo").addEventListener("dblclick", () => nz(zoom > 1 ? 1 : 2.5));
+      document.addEventListener("keydown", tecla);
+      mostrar()
+    }
+
+    /* ============================================================== painel */
+    let filtros = { q: "", mod: "", st: "", cad: "", nuc: "", desde: "", ate: "" }, pagina = 0, porPagina = 10, detalheId = null;
+
+    function valorCampo(r, k) {
+      if (k === "ficha") return ord(r.numero) + " / 2026";
+      if (k === "cadastrador") return r.cadastrador || "—";
+      if (k === "cpf" || k === "cCpf") return r[k] ? maskCPF(r[k]) : "";
+      if (["data", "nasc", "cNasc", "dPosse"].includes(k)) return dataBR(r[k]);
+      const v = r[k]; return Array.isArray(v) ? v.join(", ") : (v == null ? "" : v)
+    }
+
+    function htmlDoc(r) {
+      let h = '<div class="doc"><div class="doc-cab">' +
+        '<div class="marca-d">Escriturar Soluções Fundiárias Ltda.</div>' +
+        '<h1>Cadastro Socioeconômico e Imobiliário — REURB</h1>' +
+        '<p>Matipó / Minas Gerais · Ata de Registro de Preços nº 015/2026</p>' +
+        '<div class="nficha">FICHA Nº ' + ord(r.numero) + ' · ' + dataBR(r.data || "") + ' · ' + (r.status || "Rascunho") + '</div></div>';
+      SECOES.forEach((s, i) => {
+        if (s.show && !s.show(r)) return;
+        const campos = s.f.filter(f => !(f[4] && !f[4](r)));
+        h += '<div class="doc-sec"><h3><span class="n">' + ord(i + 1, 2) + '</span>' + esc(s.t) + '</h3><div class="doc-campos">' +
+          campos.map(f => {
+            const v = valorCampo(r, f[0]);
+            return '<div class="doc-campo' + (["posse", "infra", "benef", "nucleo", "endereco"].includes(f[0]) ? " larg" : "") + '">' +
+              '<span class="k">' + esc(f[1]) + '</span><span class="v">' + esc(v || "—") + '</span></div>'
+          }).join("") +
+          '</div></div>'
+      });
+      const nf = k => ((r.fotos || {})[k] || []).length;
+      h += '<div class="doc-sec"><h3><span class="n">07</span>Documentos fotografados</h3><div class="doc-campos">' +
+        DOCS.map(([k, rot]) => '<div class="doc-campo larg"><span class="k">' + esc(rot) + '</span><span class="v">' + (nf(k) ? nf(k) + " foto(s) anexada(s)" : "—") + '</span></div>').join("") +
+        '</div></div>';
+      h += '<div class="doc-sec"><h3><span class="n">08</span>Declaração e assinaturas</h3>' +
+        '<p style="font-size:12.4px;line-height:1.6;margin:0">' + DECLARACAO + '</p>' +
+        '<p style="font-size:12px;margin:8px 0 0"><b>Consentimento LGPD:</b> ' + (r.consent ? "Sim" : "Não") + '</p>' +
+        '<div class="doc-assin">' +
+        (r.sig && r.sig.req ? '<div><img src="' + r.sig.req + '"><p>Requerente — ' + esc(r.nome || "") + '</p></div>' : "") +
+        (r.sig && r.sig.conj ? '<div><img src="' + r.sig.conj + '"><p>Cônjuge — ' + esc(r.cNome || "") + '</p></div>' : "") +
+        '</div><p style="text-align:center;font-size:12.5px;margin-top:14px">Matipó/MG, ' + dataBR(r.data || HOJE()) + '.</p></div>';
+      return h + '</div>'
+    }
+
+    function paginasFotos(r) {
+      const ids = Object.values(r.fotos || {}).flat();
+      return ids.map((id, i) => {
+        const tipo = Object.keys(r.fotos || {}).find(k => r.fotos[k].includes(id));
+        const rot = (DOCS.find(x => x[0] === tipo) || ["", "Documento"])[1];
+        return '<div class="pg foto-pg"><img src="' + fotoURL(id) + '" alt=""><div class="cap"><b>' + esc(r.nome || "") + ' — ' + esc(rot) + '</b>' +
+          'Ficha nº ' + ord(r.numero) + ' · Matipó/MG · foto ' + (i + 1) + ' de ' + ids.length + '</div></div>'
+      }).join("")
+    }
+
+    function filtradas() {
+      const q = filtros.q.trim().toLowerCase();
+      return window.__fichas.filter(r => {
+        if (filtros.mod && r.modalidade !== filtros.mod) return false;
+        if (filtros.st && r.status !== filtros.st) return false;
+        if (filtros.cad && r.cadastrador !== filtros.cad) return false;
+        if (filtros.nuc && r.nucleo !== filtros.nuc) return false;
+        if (filtros.desde && dataDe(r.data) < filtros.desde) return false;
+        if (filtros.ate && dataDe(r.data) > filtros.ate) return false;
+        if (q) {
+          const alvo = [r.nome, r.cpf, r.rg, r.quadra, r.lote, r.nucleo, r.numero ? ord(r.numero) : "", r.endereco, r.email, r.tel]
+            .join(" ").toLowerCase(); if (!alvo.includes(q)) return false
+        }
+        return true
+      }).sort((a, b) => (b.numero || 0) - (a.numero || 0))
+    }
+
+    async function renderPainel() {
+      const u = usuarioAtual();
+      const main = $("#main");
+      if (!u || u.papel !== "admin") {
+        $("#vP").innerHTML = '<div class="card"><div class="secao-t"><span class="secao-n">!</span><div><h2>Painel do administrador</h2>' +
+          '<p>Área restrita ao cliente — Escriturar Soluções Fundiárias Ltda.</p></div></div>' +
+          '<div class="vazio"><p>Entre com a sua conta para consultar, imprimir e exportar as fichas.</p>' +
+          '<button class="btn" id="btnEntrar">Entrar no painel</button></div></div>';
+        $("#btnEntrar").onclick = entrarModal; return
+      }
+      window.__fichas = await BD.todos("fichas");
+      const lista = filtradas();
+      const total = window.__fichas;
+      const mes = HOJE().slice(0, 7);
+      const docs = await BD.todos("docs");
+      const comFoto = new Set(docs.map(x => x.ficha_id));
+      const cads = Array.from(new Set(total.map(f => f.cadastrador).filter(Boolean))).sort();
+      const nucleos = Array.from(new Set(total.map(f => f.nucleo).filter(Boolean))).sort();
+      const kpis = [
+        [total.length, "Fichas totais"],
+        [total.filter(f => f.modalidade === "REURB-S").length, "REURB-S"],
+        [total.filter(f => f.modalidade === "REURB-E").length, "REURB-E"],
+        [total.filter(f => f.status !== "Rascunho" && (!comFoto.has(f.id) || f.status === "Pendente de documentos")).length, "Docs. pendentes"],
+        [total.filter(f => dataDe(f.criadoEm).slice(0, 7) === mes).length, "Fichas do mês"]];
+      const STATUS = ["Rascunho", "Recebida", "Em análise", "Pendente de documentos", "Aprovada"];
+
+      $("#vP").innerHTML =
+        '<div class="kpis">' + kpis.map(k => '<div class="kpi"><div class="v">' + k[0] + '</div><div class="r">' + k[1] + '</div></div>').join("") + '</div>' +
+        '<div class="ferramentas">' +
+        '<input type="search" id="fq" placeholder="Buscar por nome, CPF, quadra, lote, bairro, nº da ficha…" value="' + esc(filtros.q) + '">' +
+        '<select id="fmod"><option value="">Todas modalidades</option><option' + (filtros.mod === "REURB-S" ? " selected" : "") + '>REURB-S</option><option' + (filtros.mod === "REURB-E" ? " selected" : "") + '>REURB-E</option></select>' +
+        '<select id="fst"><option value="">Todos os status</option>' + STATUS.map(s => '<option' + (filtros.st === s ? " selected" : "") + '>' + s + '</option>').join("") + '</select>' +
+        '<select id="fcad"><option value="">Todos cadastradores</option>' + cads.map(c => '<option' + (filtros.cad === c ? " selected" : "") + '>' + esc(c) + '</option>').join("") + '</select>' +
+        '<select id="fnuc"><option value="">Todos os núcleos</option>' + nucleos.map(c => '<option' + (filtros.nuc === c ? " selected" : "") + '>' + esc(c) + '</option>').join("") + '</select>' +
+        '<span class="periodo"><input type="date" id="fdesde" title="Período – de" value="' + esc(filtros.desde) + '"><span class="mini muted">até</span><input type="date" id="fate" title="Período – até" value="' + esc(filtros.ate) + '"></span>' +
+        '<button class="btn sm latao" id="btnCsv">Exportar CSV</button>' +
+        '<button class="btn sm linha" id="btnUsers">Usuários</button>' +
+        (total.some(f => f.demo) ? '<button class="btn sm perigo" id="btnLimparDemo">Limpar exemplos</button>' : "") +
+        '</div><div class="contagem">Mostrando ' + lista.length + ' de ' + total.length + ' fichas</div>' +
+        '<div id="det"></div>' +
+        '<div id="tabelaWrap">' + (detalheId ? "" : tabelaHTML(lista) + pagerHTML(lista.length)) + '</div>';
+
+      const q = $("#fq");
+      q.oninput = () => {
+        clearTimeout(window.__tBusca);
+        window.__tBusca = setTimeout(() => {
+          filtros.q = q.value; pagina = 0;
+          if (detalheId) { detalheId = null; renderPainel() } else atualizarTabela()
+        }, 220)
+      };
+      $("#fmod").onchange = e => { filtros.mod = e.target.value; pagina = 0; renderPainel() };
+      $("#fst").onchange = e => { filtros.st = e.target.value; pagina = 0; renderPainel() };
+      $("#fcad").onchange = e => { filtros.cad = e.target.value; pagina = 0; renderPainel() };
+      $("#fnuc").onchange = e => { filtros.nuc = e.target.value; pagina = 0; renderPainel() };
+      $("#fdesde").onchange = e => { filtros.desde = e.target.value; pagina = 0; renderPainel() };
+      $("#fate").onchange = e => { filtros.ate = e.target.value; pagina = 0; renderPainel() };
+      $("#btnCsv").onclick = () => exportarCSV(filtradas());
+      $("#btnUsers").onclick = usuariosModal;
+      const limpar = $("#btnLimparDemo"); if (limpar) limpar.onclick = async () => {
+        if (await confirmar("Limpar exemplos", "Remover as fichas de demonstração deste dispositivo?", "Remover")) {
+          for (const f of window.__fichas.filter(x => x.demo)) { for (const id of Object.values(f.fotos || {}).flat()) await apagarFoto(id); await BD.remover("fichas", f.id) }
+          renderPainel(); toast("Exemplos removidos.")
+        }
+      };
+      ligarLinhas();
+      if (detalheId) await renderDetalhe(detalheId)
+    }
+
+    function atualizarTabela() {
+      const lista = filtradas(), total = (window.__fichas || []).length;
+      const c = $("#vP .contagem"); if (c) c.textContent = "Mostrando " + lista.length + " de " + total + " fichas";
+      const w = $("#tabelaWrap"); if (!w) return;
+      w.innerHTML = tabelaHTML(lista) + pagerHTML(lista.length);
+      ligarLinhas()
+    }
+    function ligarLinhas() {
+      $$("#vP tbody tr").forEach(tr => tr.onclick = () => { detalheId = tr.dataset.id; renderPainel() });
+      $$("#vP [data-pag]").forEach(b => b.onclick = () => { pagina = +b.dataset.pag; atualizarTabela(); window.scrollTo({ top: 0, behavior: "smooth" }) });
+      $$("#vP [data-status]").forEach(sel => sel.onclick = e => e.stopPropagation())
+    }
+
+    function tabelaHTML(lista) {
+      if (!lista.length) return '<div class="card"><div class="vazio"><p>Nenhuma ficha encontrada com estes filtros.</p></div></div>';
+      const ini = pagina * porPagina, fatia = lista.slice(ini, ini + porPagina);
+      return '<div class="tabela-corpo"><table><thead><tr>' +
+        '<th>Nº</th><th>Requerente</th><th>Localização</th><th>Modalidade</th><th>Status</th><th>Fotos</th><th>Data</th>' +
+        '</tr></thead><tbody>' + fatia.map(r => '<tr data-id="' + r.id + '">' +
+          '<td class="n">' + ord(r.numero) + '</td>' +
+          '<td><span class="nome">' + esc(r.nome || "(sem nome)") + '</span><span class="sub">' + esc(r.cpf ? maskCPF(r.cpf) : "—") + (r.cNome ? " · cônjuge: " + esc(r.cNome) : "") + '</span></td>' +
+          '<td>' + esc(r.nucleo || "—") + '<span class="sub">Q ' + esc(r.quadra || "-") + ' · L ' + esc(r.lote || "-") + ' · ' + esc(r.endereco || "") + '</span></td>' +
+          '<td><span class="tag-mod' + (r.modalidade === "REURB-E" ? " e" : "") + '">' + esc(r.modalidade || "—") + '</span></td>' +
+          '<td>' + stampHTML(r.status) + '</td>' +
+          '<td class="n" style="color:var(--tinta)">' + Object.values(r.fotos || {}).flat().length + '</td>' +
+          '<td style="white-space:nowrap">' + dataBR(r.data || "") + '</td></tr>').join("") + '</tbody></table></div>'
+    }
+
+    function pagerHTML(n) {
+      const paginas = Math.ceil(n / porPagina); if (paginas <= 1) return "";
+      let h = '<div class="pager">';
+      for (let i = 0; i < paginas; i++)h += '<button class="btn sm ' + (i === pagina ? "latao" : "fantasma") + '" data-pag="' + i + '">' + (i + 1) + '</button>';
+      return h + '</div>'
+    }
+
+    async function renderDetalhe(id) {
+      const r = await BD.get("fichas", id);
+      if (!r) { detalheId = null; renderPainel(); return }
+      await carregarDocsDaFicha(r);
+      const ids = Object.values(r.fotos || {}).flat();
+      const hist = (r.historico || []).slice().reverse();
+      $("#det").innerHTML =
+        '<div class="card sombra-topo"><div class="secao-t"><span class="secao-n">' + ord(r.numero) + '</span>' +
+        '<div><h2>' + esc(r.nome || "(sem nome)") + '</h2><p>' + esc(r.nucleo || "—") + ' · Q ' + esc(r.quadra || "-") + ' L ' + esc(r.lote || "-") +
+        ' · ' + esc(r.modalidade || "") + ' · enviada em ' + dataBR(r.data || "") + '</p></div></div>' +
+        '<div class="btn-grupo" style="margin-bottom:14px">' +
+        '<button class="btn" id="btnPrint">Imprimir ficha completa</button>' +
+        '<button class="btn latao" id="btnPdf">Baixar em PDF</button>' +
+        '<button class="btn azul" id="btnZip">Baixar fotos (' + ids.length + ')</button>' +
+        '<button class="btn linha" id="btnEdit">Editar ficha</button>' +
+        '<button class="btn perigo" id="btnDel">Excluir</button>' +
+        '<button class="btn fantasma" id="btnVoltarDet">← Voltar à lista</button></div>' +
+        '<div class="status-barra">' + stampHTML(r.status) +
+        '<select id="stNovo">' + ["Rascunho", "Recebida", "Em análise", "Pendente de documentos", "Aprovada"].map(s => '<option' + (r.status === s ? " selected" : "") + '>' + s + '</option>').join("") + '</select>' +
+        '<textarea id="obsInt" placeholder="Observações internas…">' + esc(r.obs || "") + '</textarea>' +
+        '<button class="btn sm" id="stSalvar">Salvar</button></div>' +
+        htmlDoc(r) +
+        '<div class="legenda-topo" style="margin-top:18px">Galeria dos documentos (' + ids.length + ')</div>' +
+        (ids.length ? '<div class="galeria" style="margin-top:9px">' + ids.map((fid, i) => {
+          const tipo = Object.keys(r.fotos || {}).find(k => r.fotos[k].includes(fid));
+          const rot = (DOCS.find(x => x[0] === tipo) || ["", "Documento"])[1];
+          return '<div class="foto-card" data-foto="' + i + '"><img src="' + thumbURL(fid) + '" alt=""><div class="leg">' + esc(rot) + '</div></div>'
+        }).join("") + '</div>'
+          : '<p class="aviso" style="margin-top:9px">Nenhuma foto anexada a esta ficha.</p>') +
+        '<div class="legenda-topo" style="margin-top:18px">Auditoria</div>' +
+        '<ul class="hist">' + (hist.length ? hist.map(h => '<li><time>' + esc(h.q || "") + '</time><b>' + esc(h.u || "—") + '</b><span>' + esc(h.a || "") + '</span></li>').join("")
+          : '<li><time>' + dataBR(dataDe(r.criadoEm)) + '</time><b>' + esc(r.cadastrador || "—") + '</b><span>Ficha criada</span></li>') + '</ul></div>';
+
+      $("#btnVoltarDet").onclick = () => { detalheId = null; renderPainel() };
+      $("#btnPrint").onclick = () => imprimirFicha(r, false);
+      $("#btnPdf").onclick = () => imprimirFicha(r, true);
+      $("#btnZip").onclick = () => baixarZip(r);
+      $("#btnEdit").onclick = async () => { await abrirFicha(r.id); aba("N") };
+      $("#btnDel").onclick = async () => {
+        if (await confirmar("Excluir ficha nº " + ord(r.numero), "Esta ação remove a ficha e todas as suas fotos deste dispositivo.", "Excluir ficha")) {
+          for (const fid of ids) await apagarFoto(fid);
+          await BD.remover("fichas", r.id); detalheId = null; renderPainel(); toast("Ficha excluída.", "erro")
+        }
+      };
+      $("#stSalvar").onclick = async () => {
+        r.status = $("#stNovo").value; r.obs = $("#obsInt").value;
+        r.historico = (r.historico || []).concat([{ a: "Status alterado para " + r.status + (r.obs ? " · " + r.obs : ""), u: usuarioAtual().nome, q: agoraBR() }]);
+        await BD.put("fichas", r); renderPainel(); toast("Status atualizado para " + r.status + ".")
+      };
+      $$("#det .foto-card").forEach(c => c.onclick = () => lightbox(ids, +c.dataset.foto, "Documentos da ficha", r.nome || ""))
+    }
+
+    function imprimirFicha(r, comoPdf) {
+      $("#print").innerHTML = htmlDoc(r) + paginasFotos(r);
+      setTimeout(() => { window.print(); if (comoPdf) toast("Na janela de impressão escolha “Salvar como PDF”.", "aviso", 5000) }, 220)
+    }
+
+    /* --------------------------------------------------------- CSV e ZIP */
+    const COLUNAS = [["numero", "Ficha Nº"], ["data", "Data"], ["status", "Status"], ["modalidade", "Modalidade"], ["cadastrador", "Cadastrador"]]
+      .concat(SECOES.flatMap((s, i) => s.f
+        .filter(f => !["ficha", "cadastrador", "data", "modalidade"].includes(f[0]))
+        .map(f => [f[0], (i === 2 ? "Cônjuge - " : "") + f[1]])))
+      .concat([["nFotos", "Nº de fotos"]]);
+    function exportarCSV(lista) {
+      const q = v => '"' + String(Array.isArray(v) ? v.join("; ") : v == null ? "" : v).replace(/"/g, '""') + '"';
+      const linhas = lista.map(r => COLUNAS.map(c => {
+        if (c[0] === "numero") return q(ord(r.numero));
+        if (c[0] === "nFotos") return q(Object.values(r.fotos || {}).flat().length);
+        return q(valorCampo(r, c[0]))
+      }));
+      const txt = "\ufeff" + [COLUNAS.map(c => q(c[1])).join(";")].concat(linhas.map(l => l.join(";"))).join("\r\n");
+      const blob = new Blob([txt], { type: "text/csv;charset=utf-8;" });
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+      a.download = "fichas_reurb_matipo_" + HOJE() + ".csv"; a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+      toast(lista.length + " ficha(s) exportada(s) para CSV.")
+    }
+
+    const CRC = (() => {
+      const t = new Uint32Array(256); for (let n = 0; n < 256; n++) {
+        let c = n;
+        for (let k = 0; k < 8; k++)c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0
+      } return t
+    })();
+    function crc32(b) { let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++)c = CRC[(c ^ b[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0 }
+    const w16 = v => [v & 255, (v >>> 8) & 255], w32 = v => [v & 255, (v >>> 8) & 255, (v >>> 16) & 255, (v >>> 24) & 255];
+    async function gerarZip(arqs) {
+      const partes = [], cent = []; let off = 0; const d = agora();
+      const hora = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1);
+      const data = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate();
+      for (const a of arqs) {
+        const nome = new TextEncoder().encode(a.nome), bytes = a.bytes, crc = crc32(bytes);
+        const loc = new Uint8Array([0x50, 0x4B, 3, 4, ...w16(20), ...w16(0), ...w16(0), ...w16(hora), ...w16(data),
+          ...w32(crc), ...w32(bytes.length), ...w32(bytes.length), ...w16(nome.length), ...w16(0)]);
+        partes.push(loc, nome, bytes);
+        cent.push(new Uint8Array([0x50, 0x4B, 1, 2, ...w16(20), ...w16(20), ...w16(0), ...w16(0), ...w16(hora), ...w16(data),
+          ...w32(crc), ...w32(bytes.length), ...w32(bytes.length), ...w16(nome.length), ...w16(0), ...w16(0),
+          ...w16(0), ...w16(0), ...w32(0), ...w32(off)]), nome);
+        off += loc.length + nome.length + bytes.length
+      }
+      const tam = cent.reduce((s, p) => s + p.length, 0);
+      const fim = new Uint8Array([0x50, 0x4B, 5, 6, ...w16(0), ...w16(0), ...w16(arqs.length), ...w16(arqs.length), ...w32(tam), ...w32(off), ...w16(0)]);
+      return new Blob([...partes, ...cent, fim], { type: "application/zip" })
+    }
+    async function baixarZip(r) {
+      const mapa = r.fotos || {}; const arqs = [];
+      for (const k of Object.keys(mapa)) for (const id of mapa[k]) {
+        const f = cacheFotos.get(id); if (!f) continue;
+        const rot = slug((DOCS.find(x => x[0] === k) || ["", "doc"])[1]);
+        arqs.push({
+          nome: "ficha-" + ord(r.numero) + "-" + slug(r.nome) + "/" + rot + "-" + (arqs.length + 1) + ".jpg",
+          bytes: new Uint8Array(await f.blob.arrayBuffer())
+        })
+      }
+      if (!arqs.length) { toast("Esta ficha não tem fotos.", "erro"); return }
+      const zip = await gerarZip(arqs);
+      const a = document.createElement("a"); a.href = URL.createObjectURL(zip);
+      a.download = "fichas_" + ord(r.numero) + "_documentos.zip"; a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+      toast(arqs.length + " foto(s) compactada(s).")
+    }
+
+    /* --------------------------------------------------------- usuários */
+    async function usuariosModal() {
+      const lista = (await BD.todos("usuarios")).sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
+      const m = ov("<h3>Usuários do sistema</h3><p>Cadastre e desative os cadastradores de campo.</p>" +
+        '<div style="margin-top:14px">' + lista.map(u => '<div class="li" style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--linha)">' +
+          '<div><b>' + esc(u.nome) + '</b><br><small style="color:var(--tinta-2)">' + esc(u.email) + ' · ' + esc(u.papel) + '</small></div>' +
+          '<div style="text-align:right">' + (u.ativo === false ? '<span class="stamp s-pendente">Inativo</span>' : '<span class="stamp s-aprovada">Ativo</span>') +
+          (u.papel === "admin" ? "" : '<br><button class="btn sm fantasma" data-off="' + u.id + '" style="margin-top:6px">' + (u.ativo === false ? "Reativar" : "Desativar") + '</button>') + '</div></div>').join("") +
+        '</div><hr style="border:0;border-top:1px solid var(--linha);margin:16px 0"><h3 style="font-size:16px">Novo usuário</h3>' +
+        '<label class="f">Nome<input id="nuNome" placeholder="Nome completo"></label>' +
+        '<label class="f">E-mail<input id="nuEmail" type="email" placeholder="nome@escriturar.com.br"></label>' +
+        '<label class="f">Senha<input id="nuSenha" type="password" placeholder="mínimo 4 caracteres"></label>' +
+        '<label class="f">Papel<select id="nuPapel"><option value="cadastrador">Cadastrador</option><option value="admin">Administrador</option></select></label>' +
+        '<p id="nuErro" style="display:none;color:var(--perigo);font-size:13.5px;font-weight:600"></p>' +
+        '<div class="mo-acoes"><button class="btn fantasma" data-x>Fechar</button><button class="btn" id="nuOk">Criar usuário</button></div>');
+      m.mo.querySelectorAll("[data-off]").forEach(b => b.onclick = async () => {
+        const u = await BD.get("usuarios", b.dataset.off); u.ativo = u.ativo === false;
+        await BD.put("usuarios", u); m.fechar(); usuariosModal(); toast(u.ativo ? "Usuário reativado." : "Usuário desativado.")
+      });
+      m.mo.querySelector("#nuOk").onclick = async () => {
+        const nome = m.mo.querySelector("#nuNome").value.trim();
+        const email = m.mo.querySelector("#nuEmail").value.trim().toLowerCase();
+        const senha = m.mo.querySelector("#nuSenha").value;
+        const papel = m.mo.querySelector("#nuPapel").value;
+        const erro = m.mo.querySelector("#nuErro");
+        if (!nome || !email || senha.length < 4) { erro.textContent = "Preencha nome, e-mail e senha (mín. 4)."; erro.style.display = "block"; return }
+        if (await BD.get("usuarios", email)) { erro.textContent = "Este e-mail já está cadastrado."; erro.style.display = "block"; return }
+        await BD.put("usuarios", { id: email, nome, email, papel, ativo: true, senha: hash(senha), criadoEm: Date.now() });
+        m.fechar(); usuariosModal(); toast("Usuário " + nome + " criado.")
+      }
+    }
+
+    /* ------------------------------------------------------- demonstração */
+    function montarCPF(base) {
+      const n = String(base).padStart(9, "0").split("").map(Number);
+      const calc = (nums, peso) => {
+        let s = 0; for (let i = 0; i < nums.length; i++)s += nums[i] * (peso - i);
+        let r = (s * 10) % 11; return r === 10 ? 0 : r
+      };
+      const d1 = calc(n, 10), d2 = calc(n.concat(d1), 11);
+      return n.join("") + d1 + d2
+    }
+
+    function fotoExemplo(titulo, sub) {
+      return new Promise(ok => {
+        const c = document.createElement("canvas"); c.width = 1100; c.height = 1480;
+        const x = c.getContext("2d");
+        x.fillStyle = "#f2eee2"; x.fillRect(0, 0, 1100, 1480);
+        x.strokeStyle = "#c9c1ab"; x.lineWidth = 7; x.strokeRect(34, 34, 1032, 1412);
+        x.fillStyle = "#123c2c"; x.fillRect(34, 34, 1032, 168);
+        x.fillStyle = "#c9a24b"; x.font = "600 33px Georgia"; x.fillText("ESCRITURAR SOLUÇÕES FUNDIÁRIAS", 74, 112);
+        x.fillStyle = "#f2eee2"; x.font = "24px Georgia"; x.fillText("Regularização Fundiária · Matipó/MG", 74, 164);
+        x.fillStyle = "#1f2019"; x.font = "600 56px Georgia"; x.fillText(titulo, 74, 320);
+        x.fillStyle = "#6c6a5c"; x.font = "30px Georgia"; x.fillText(sub, 74, 376);
+        x.strokeStyle = "#d8d0ba"; x.lineWidth = 3; x.beginPath(); x.moveTo(74, 412); x.lineTo(1026, 412); x.stroke();
+        let y = 470;
+        for (let i = 0; i < 16; i++) {
+          const w = 520 + ((i * 137) % 430);
+          x.fillStyle = i % 4 === 0 ? "#a8a191" : "#cdc6b4";
+          x.fillRect(74, y, w, i % 4 === 0 ? 20 : 15);
+          if (i % 4 === 0) { x.fillStyle = "#cdc6b4"; x.fillRect(74 + w + 26, y, 180 - (i * 11 % 120), 15) }
+          y += 52
+        }
+        x.save(); x.translate(820, 1210); x.rotate(-0.22);
+        x.strokeStyle = "#9e2b1f"; x.lineWidth = 7; x.beginPath(); x.arc(0, 0, 140, 0, Math.PI * 2); x.stroke();
+        x.fillStyle = "#9e2b1f"; x.font = "bold 44px Georgia"; x.textAlign = "center";
+        x.fillText("MATIPÓ/MG", 0, -8); x.font = "26px Georgia"; x.fillText("REURB · 2026", 0, 42);
+        x.restore(); x.textAlign = "left";
+        x.fillStyle = "#123c2c"; x.fillRect(74, 1330, 420, 74);
+        x.fillStyle = "#f2eee2"; x.font = "30px Georgia"; x.fillText("Documento anexado à ficha", 96, 1378);
+        c.toBlob(b => ok(b), "image/jpeg", .85)
+      })
+    }
+
+    const EXEMPLOS = [
+      {
+        nome: "Maria Aparecida de Jesus", cpf: montarCPF("390533447"), rg: "14.882.907", orgao: "SSP/MG", nasc: "1978-04-12",
+        nacio: "Brasileira", natur: "Matipó/MG", prof: "Auxiliar de limpeza", tel: "(31) 99876-5432", email: "maria.jesus@example.com",
+        mae: "Maria das Graças de Jesus", civil: "Casado(a)", cNome: "João Batista Fernandes", cCpf: montarCPF("529982247"),
+        cRg: "11.204.556", cOrgao: "SSP/MG", cNasc: "1975-09-03", cProf: "Pedreiro", cNacio: "Brasileira", regime: "Comunhão Parcial",
+        modalidade: "REURB-S", nucleo: "Vila Progresso", endereco: "Rua Nova Esperança", numero_end: "145", compl: "Fundos",
+        quadra: "07", lote: "12", iptu: "03.045.012.0007-12", posse: ["Contrato de Compra e Venda (Gaveta)"],
+        dPosse: "2009-06-01", tempo: "16", transm: "Antônio Carlos de Paula", outroImovel: "Não", beneficiado: "Não",
+        uso: "Residencial", constr: "Alvenaria", pav: "1", infra: ["Água encanada COPASA", "Energia elétrica CEMIG", "Coleta de lixo"],
+        pessoas: "5", faixa: "1 a 3 SM", renda: "2.180,00", benef: ["Bolsa Família"], status: "Em análise", obs: "Aguardando certidão de casamento."
+      },
+      {
+        nome: "Antônio Carlos de Paula", cpf: montarCPF("153509460"), rg: "09.771.340", orgao: "SSP/MG", nasc: "1969-11-27",
+        nacio: "Brasileira", natur: "Guiricema/MG", prof: "Agricultor", tel: "(31) 98811-2043", email: "antonio.paula@example.com",
+        mae: "Benedita Rosa de Paula", civil: "Solteiro(a)", modalidade: "REURB-S", nucleo: "Núcleo Santa Cruz",
+        endereco: "Rua das Acácias", numero_end: "88", quadra: "03", lote: "05", iptu: "03.045.011.0003-05",
+        posse: ["Declaração de Posse"], dPosse: "2012-02-15", tempo: "12", transm: "Herança de família", outroImovel: "Não",
+        beneficiado: "Sim", uso: "Residencial", constr: "Madeira/Mista", pav: "1",
+        infra: ["Energia elétrica CEMIG", "Iluminação pública"], pessoas: "3", faixa: "Até 1 SM", renda: "1.320,00",
+        benef: ["BPC/LOAS"], status: "Recebida"
+      },
+      {
+        nome: "Rosária Mendes Lima", cpf: montarCPF("529982247"), rg: "21.556.108", orgao: "SSP/MG", nasc: "1985-07-19",
+        nacio: "Brasileira", natur: "Matipó/MG", prof: "Costureira", tel: "(31) 99123-7788", email: "rosaria.lima@example.com",
+        mae: "Ivone Mendes", civil: "União Estável", cNome: "Carlos Eduardo Souza", cCpf: montarCPF("390533447"),
+        cRg: "18.002.771", cOrgao: "SSP/MG", cNasc: "1982-01-30", cProf: "Motorista", cNacio: "Brasileira",
+        modalidade: "REURB-E", nucleo: "Bairro Novo Horizonte", endereco: "Av. Brasil", numero_end: "1020", compl: "",
+        quadra: "12", lote: "09", iptu: "03.045.014.0012-09", posse: ["Recibo / Recibo de Quitação"],
+        dPosse: "2016-09-10", tempo: "8", transm: "Construtora Santa Rita", outroImovel: "Sim", beneficiado: "Não",
+        uso: "Misto", constr: "Alvenaria", pav: "2", infra: ["Água encanada COPASA", "Energia elétrica CEMIG", "Rede de esgoto", "Pavimentação asfáltica/calçamento"],
+        pessoas: "4", faixa: "3 a 5 SM", renda: "4.600,00", benef: ["Não"], status: "Pendente de documentos",
+        obs: "Falta comprovante de renda do titular."
+      },
+      {
+        nome: "Sebastião Nogueira Braga", cpf: montarCPF("114444666"), rg: "06.310.925", orgao: "SSP/MG", nasc: "1954-03-08",
+        nacio: "Brasileira", natur: "Serra Azul/MG", prof: "Aposentado", tel: "(31) 98444-1122", email: "sebastiao.braga@example.com",
+        mae: "Terezinha Nogueira", civil: "Viúvo(a)", modalidade: "REURB-S", nucleo: "Vila Progresso", endereco: "Rua São José",
+        numero_end: "31", quadra: "07", lote: "21", iptu: "03.045.012.0007-21", posse: ["Não possui documento escrito"],
+        dPosse: "1998-05-04", tempo: "27", transm: "Posse pacífica desde 1998", outroImovel: "Não", beneficiado: "Não",
+        uso: "Residencial", constr: "Alvenaria", pav: "1", infra: ["Energia elétrica CEMIG", "Coleta de lixo"],
+        pessoas: "2", faixa: "Até 1 SM", renda: "1.412,00", benef: ["BPC/LOAS"], status: "Aprovada", obs: "Vistoria concluída em campo."
+      }];
+
+    const FOTOS_EXEMPLO = [["rgcpf", "RG e CPF", "Titular — via frente"],
+    ["resid", "Comprovante de residência", "Conta de energia — vencimento recente"],
+    ["posseDoc", "Comprovação da posse", "Contrato particular de compra e venda"]];
+
+    async function semente() {
+      if (await BD.contar("usuarios") === 0) {
+        await BD.put("usuarios", {
+          id: "admin@escriturar.com.br", nome: "Administrador", email: "admin@escriturar.com.br",
+          papel: "admin", ativo: true, senha: hash("admin123"), criadoEm: Date.now()
+        });
+        await BD.put("usuarios", {
+          id: "cadastrador@escriturar.com.br", nome: "Cadastrador Exemplo", email: "cadastrador@escriturar.com.br",
+          papel: "cadastrador", ativo: true, senha: hash("reurb2026"), criadoEm: Date.now()
+        })
+      }
+      if (await BD.contar("fichas") > 0) return;
+      for (let i = 0; i < EXEMPLOS.length; i++) {
+        const e = EXEMPLOS[i], id = uid();
+        const ficha = Object.assign({}, e, {
+          id, numero: i + 1, data: HOJE(), cadastrador: "Cadastrador Exemplo",
+          status: e.status || "Recebida", consent: true, criadoEm: Date.now() - i * 86400000, atualizadoEm: Date.now(),
+          demo: true, fotos: {}, sig: {}, historico: [{ a: "Ficha criada (exemplo)", u: "Cadastrador Exemplo", q: agoraBR() }]
+        });
+        const quantos = i === 3 ? 1 : 3;
+        for (let j = 0; j < quantos; j++) {
+          const [k, t, s] = FOTOS_EXEMPLO[j];
+          const blob = await fotoExemplo(t, "Ficha nº " + ord(i + 1) + " · " + e.nome);
+          const mini = await comprimir(blob, 340, .72);
+          const fid = uid();
+          await BD.put("docs", { id: fid, ficha_id: id, tipo: k, nome: t + ".jpg", blob, thumb: mini, criadoEm: Date.now() });
+          cacheFotos.set(fid, { blob, thumb: mini });
+          (ficha.fotos[k] = ficha.fotos[k] || []).push(fid)
+        }
+        await BD.put("fichas", ficha)
+      }
+      await BD.put("meta", { chave: "numero", valor: EXEMPLOS.length });
+      toast("Base local inicializada com 4 fichas de exemplo.", "", 4000)
+    }
+
+    /* ------------------------------------------------------------ abas */
+    function aba(qual) {
+      const painel = qual === "P";
+      $("#vN").classList.toggle("hide", painel);
+      $("#vP").classList.toggle("hide", !painel);
+      $("#tN").classList.toggle("on", !painel);
+      $("#tP").classList.toggle("on", painel);
+      $("#main").classList.toggle("painel-larg", painel);
+      if (painel) renderPainel(); else { render(); renderLista() }
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+    $("#tN").onclick = () => aba("N");
+    $("#tP").onclick = () => aba("P");
+
+    /* --------------------------------------------------------- iniciar */
+    (async function () {
+      try {
+        await BD.abrir();
+        await semente();
+        novaFicha();
+        atualizarBarraSessao();
+        render();
+        renderLista();
+      } catch (e) { aviso("Falha na inicialização: " + (e && e.stack ? e.stack : String(e))) }
+    })();
+  </script>
+</body>
+
+</html>
